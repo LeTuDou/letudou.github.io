@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://letudou.github.io/"/>
-  <updated>2019-09-07T14:08:07.129Z</updated>
+  <updated>2019-09-07T14:52:26.869Z</updated>
   <id>https://letudou.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://letudou.github.io/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/"/>
     <id>https://letudou.github.io/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/</id>
     <published>2019-09-07T13:40:20.000Z</published>
-    <updated>2019-09-07T14:08:07.129Z</updated>
+    <updated>2019-09-07T14:52:26.869Z</updated>
     
     <summary type="html">
     
@@ -39,7 +39,7 @@
     
       <category term="Linux" scheme="https://letudou.github.io/tags/Linux/"/>
     
-      <category term="服务器性能测试" scheme="https://letudou.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+      <category term="WebTest" scheme="https://letudou.github.io/tags/WebTest/"/>
     
   </entry>
   
