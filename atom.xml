@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://letudou.github.io/"/>
-  <updated>2019-09-07T13:53:42.983Z</updated>
+  <updated>2019-09-07T14:08:07.129Z</updated>
   <id>https://letudou.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web性能测试工具使用</title>
+    <link href="https://letudou.github.io/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/"/>
+    <id>https://letudou.github.io/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/</id>
+    <published>2019-09-07T13:40:20.000Z</published>
+    <updated>2019-09-07T14:08:07.129Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;apache-bench&quot;&gt;&lt;a href=&quot;#apache-bench&quot; class=&quot;headerlink&quot; title=&quot;apache bench&quot;&gt;&lt;/a&gt;apache
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="https://letudou.github.io/tags/Linux/"/>
+    
+      <category term="服务器性能测试" scheme="https://letudou.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux开发环境部署</title>
