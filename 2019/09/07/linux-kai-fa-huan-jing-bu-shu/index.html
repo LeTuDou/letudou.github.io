@@ -1,0 +1,1016 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Linux开发环境部署, JAVA,JavaBlog,Java">
+    <meta name="description" content="Linux开发环境部署Java环境部署
+下载对应tar.gz
+
+上传服务器
+
+服务器配置
+1.解压
+[root@localhost Java]# tar -zxvf jdk-8u211-linux-x64.tar.gz
+2.解压完毕需要配置">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Linux开发环境部署 | 乐土豆</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">乐土豆</span>
+                    </a>
+                </div>
+                
+
+<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search" title="搜索"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">乐土豆</div>
+        <div class="logo-desc">
+            
+            记录工作,学习,生活
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link">
+    <a href="https://github.com/letudou" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+    <a href="mailto:letudou@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2726804696" class="tooltipped" data-tooltip="QQ联系我: 2726804696" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Linux开发环境部署
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Linux/" target="_blank">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-09-07
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        2.1k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        10 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="Linux开发环境部署"><a href="#Linux开发环境部署" class="headerlink" title="Linux开发环境部署"></a>Linux开发环境部署</h2><h3 id="Java环境部署"><a href="#Java环境部署" class="headerlink" title="Java环境部署"></a>Java环境部署</h3><ol>
+<li><p>下载对应tar.gz</p>
+</li>
+<li><p>上传服务器</p>
+</li>
+<li><p>服务器配置</p>
+<pre class=" language-sh"><code class="language-sh">1.解压
+[root@localhost Java]# tar -zxvf jdk-8u211-linux-x64.tar.gz
+2.解压完毕需要配置，编辑profile文件：
+[root@localhost Java]# vim /etc/profile
+3.进去以后，在最后添加如下内容，配置环境变量：
+#Java开发者环境
+JAVA_HOME=/root/Java/jdk1.8.0_211
+JRE_HOME=$JAVA_HOME/jre
+CLASS_PATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:
+PATH=.:$JAVA_HOME/bin:$PATH
+export  PATH JAVA_HOME JRE_HOME  CLASS_PATH
+4.修改保存后让它生效
+[root@localhost jdk1.8.0_211]# source /etc/profile
+5.检验java或者javac命令
+[root@localhost jdk1.8.0_211]# java -version
+java version "1.8.0_211"
+Java(TM) SE Runtime Environment (build 1.8.0_211-b12)
+Java HotSpot(TM) 64-Bit Server VM (build 25.211-b12, mixed mode)</code></pre>
+</li>
+</ol>
+<h3 id="Nginx安装"><a href="#Nginx安装" class="headerlink" title="Nginx安装"></a>Nginx安装</h3><p>1.安装编译工具及库文件</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost jdk1.8.0_211]# yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</code></pre>
+<p>2.安装PCRE</p>
+<blockquote>
+<p>PCRE 作用是让 Nginx 支持 Rewrite 功能</p>
+</blockquote>
+<ol>
+<li><p>下载安装包</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost ~]# cd /usr/local/src/
+[root@localhost src]# wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz</code></pre>
+</li>
+</ol>
+<ol start="2">
+<li><p>解压安装包</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# tar -zxvf pcre-8.35.tar.gz</code></pre>
+</li>
+<li><p>进入安装包目录</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# cd pcre-8.35</code></pre>
+</li>
+<li><p>编译安装</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost pcre-8.35]# ./configure
+[root@localhost pcre-8.35]# make && make install</code></pre>
+</li>
+<li><p>查看版本</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost pcre-8.35]# pcre-config --version
+8.35</code></pre>
+</li>
+</ol>
+<p>3.安装Nginx</p>
+<ol>
+<li><p>下载Nginx</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost pcre-8.35]# cd /usr/local/src
+[root@localhost src]# wget http://nginx.org/download/nginx-1.6.2.tar.gz</code></pre>
+</li>
+<li><p>解压安装包</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# tar zxvf nginx-1.6.2.tar.gz </code></pre>
+</li>
+<li><p>进入安装包目录</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# cd nginx-1.6.2</code></pre>
+</li>
+<li><p>编译安装</p>
+<pre class=" language-sh"><code class="language-sh">  [root@localhost nginx-1.6.2]# ./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.35
+  nginx path prefix: "/usr/local/webserver/nginx"
+  nginx binary file: "/usr/local/webserver/nginx/sbin/nginx"
+  nginx configuration prefix: "/usr/local/webserver/nginx/conf"
+  nginx configuration file: "/usr/local/webserver/nginx/conf/nginx.conf"
+  nginx pid file: "/usr/local/webserver/nginx/logs/nginx.pid"
+  nginx error log file: "/usr/local/webserver/nginx/logs/error.log"
+  nginx http access log file: "/usr/local/webserver/nginx/logs/access.log"
+  nginx http client request body temporary files: "client_body_temp"
+  nginx http proxy temporary files: "proxy_temp"
+  nginx http fastcgi temporary files: "fastcgi_temp"
+  nginx http uwsgi temporary files: "uwsgi_temp"
+  nginx http scgi temporary files: "scgi_temp"</code></pre>
+</li>
+<li><p>测试版本</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -v
+nginx version: nginx/1.6.2</code></pre>
+</li>
+<li><p>命令提示</p>
+<pre class=" language-sh"><code class="language-sh">1.检查配置文件nginx.conf的正确性
+[root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -t
+nginx: the configuration file /usr/local/webserver/nginx/conf/nginx.conf syntax is ok
+nginx: configuration file /usr/local/webserver/nginx/conf/nginx.conf test is successful
+2.重新载入配置文件
+[root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -s reload 
+3.重启 Nginx
+[root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -s reopen 
+4.停止 Nginx
+[root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -s stop</code></pre>
+</li>
+</ol>
+<h3 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h3><ol>
+<li><p>查看Linux系统版本和内核版本</p>
+<pre class=" language-sh"><code class="language-sh">查看操作系统版本
+[root@localhost ~]# cat /etc/redhat-release
+CentOS Linux release 7.4.1708 (Core) 
+查看内核版本
+[root@localhost ~]#  uname -r 
+3.10.0-693.el7.x86_64</code></pre>
+</li>
+<li><p>卸载历史版本( 使用命令rpm -e –nodeps {-file-name}进行移除操作，移除的时候可能会有依赖，要注意一定的顺序。)我这里暂无</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost ~]# rpm -qa | grep mysql</code></pre>
+</li>
+<li><p>使用rpm命令安装MySQL组件(使用命令rpm -ivh {-file-name}进行安装操作)</p>
+<blockquote>
+<p>按照依赖关系依次安装rpm包 依赖关系依次为common→libs→client→server</p>
+</blockquote>
+<pre><code>[root@localhost ~]# rpm -ivh mysql-community-common-5.7.27-1.el7.x86_64.rpm
+[root@localhost ~]# rpm -ivh mysql-community-libs-5.7.27-1.el7.x86_64.rpm
+[root@localhost ~]# rpm -ivh mysql-community-client-5.7.27-1.el7.x86_64.rpm
+[root@localhost ~]# rpm -ivh mysql-community-server-5.7.27-1.el7.x86_64.rpm  --force --nodeps</code></pre><p>[^注]: <strong>ivh中， i-install安装；v-verbose进度条；h-hash哈希校验</strong>`</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost ~]# rpm -ivh mysql-community-libs-5.7.27-1.el7.x86_64.rpm
+警告：mysql-community-libs-5.7.27-1.el7.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥 ID 5072e1f5: NOKEY
+错误：依赖检测失败：
+    mysql-community-common(x86-64) >= 5.7.9 被 mysql-community-libs-5.7.27-1.el7.x86_64 需要
+    mariadb-libs 被 mysql-community-libs-5.7.27-1.el7.x86_64 取代
+
+解决方案:清除yum里所有mariadb依赖包
+[root@localhost ~]# rpm -qa | grep mariadb
+mariadb-libs-5.5.56-2.el7.x86_64
+[root@localhost ~]# rpm -e --nodeps mariadb-libs-5.5.56-2.el7.x86_64
+
+[root@localhost ~]# rpm -ivh mysql-community-server-5.7.27-1.el7.x86_64.rpm
+警告：mysql-community-server-5.7.27-1.el7.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥 ID 5072e1f5: NOKEY
+错误：依赖检测失败：
+    net-tools 被 mysql-community-server-5.7.27-1.el7.x86_64 需要
+原因：这是由于yum安装了旧版本的GPG keys造成的
+解决方案:
+[root@localhost ~]# rpm -ivh mysql-community-server-5.7.27-1.el7.x86_64.rpm  --force --nodeps</code></pre>
+</li>
+<li><p>注意细节</p>
+<ol>
+<li>执行 yum remove mysql-libs   命令后，会自动删除掉 /etc/ 下的 my.cnf 文件</li>
+<li>对于安装mysql组件，只有安装了 mysql-community-server-5.7.22-1.el7.x86_64.rpm 组件，才会:<ul>
+<li>在 /etc/下生成 my.cnf 文件 和 my.cnf.d 文件夹</li>
+<li>在/var/lib/下生产以下三个文件夹</li>
+<li>在/var/log/ 下生成 mysqld.log 文件</li>
+<li>在/var/run/ 下生成 mysqld 目录</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="MySQL配置"><a href="#MySQL配置" class="headerlink" title="MySQL配置"></a>MySQL配置</h3><ol>
+<li><p>启动mysql</p>
+<blockquote>
+<p>安装完后，使用命令 <strong>service mysqld start</strong> 或 <strong>systemctl start mysqld.service</strong> 启动MySQL服务。（如果mysql服务无法启动，就重启一下系统）</p>
+</blockquote>
+<pre class=" language-sh"><code class="language-sh">启动mysql
+[root@localhost ~]# systemctl start mysqld.service 
+查看mysql状态
+[root@localhost ~]# systemctl status mysqld.service
+关闭mysql
+[root@localhost ~]# systemctl stop mysqld.service</code></pre>
+<p>补充说明</p>
+<pre><code>查看mysql进程
+[root@localhost ~]# ps -ef|grep mysql
+查看3306端口
+[root@localhost ~]# netstat -anop|grep 3306
+
+Linux使用netstat或者ifconfig命令时，显示命令未找到。
+[root@localhost ~]# netstat -anop|grep 3306
+-bash: netstat: 未找到命令
+[root@localhost ~]# yum search netstat
+已加载插件：fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.jdcloud.com
+ * extras: mirror.bit.edu.cn
+ * updates: mirror.jdcloud.com
+============== 匹配：netstat =================
+dstat.noarch : Versatile resource statistics tool
+net-snmp.x86_64 : A collection of SNMP protocol tools and libraries
+net-tools.x86_64 : Basic networking tools
+[root@localhost ~]# yum install net-tools -y</code></pre></li>
+</ol>
+<p>   2.登录MySQL修改root密码</p>
+<ol>
+<li><p>查看临时密码:</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost ~]# grep 'temporary password' /var/log/mysqld.log
+2019-09-05T03:42:23.844021Z 1 [Note] A temporary password is generated for root@localhost: nUdCNyay/8B#</code></pre>
+<p>nUdCNyay/8B# 就是登陆密码</p>
+</li>
+<li><p>使用临时密码登陆,修改root密码</p>
+<pre class=" language-sh"><code class="language-sh">mysql> ALTER USER root@localhost IDENTIFIED  BY '123123';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+解决方案:
+1.更改策略，设置 validate_password_policy=0;
+mysql> set global validate_password_policy=0;
+Query OK, 0 rows affected (0.00 sec)
+2.重设密码
+mysql> set password for root@localhost=password('ab123123');
+Query OK, 0 rows affected, 1 warning (0.31 sec)
+3.授予远程访问权限
+mysql>  grant all privileges on *.* to 'root' @'%' identified by 'ab123123';
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+4.刷新权限
+mysql> flush privileges;
+Query OK, 0 rows affected (0.00 sec)</code></pre>
+</li>
+<li><p>查看当前数据库密码策略</p>
+<pre class=" language-sh"><code class="language-sh">mysql> show VARIABLES like "%password%";
++---------------------------------------+-------+
+| Variable_name                         | Value |
++---------------------------------------+-------+
+| default_password_lifetime             | 0     |
+| disconnect_on_expired_password        | ON    |
+| log_builtin_as_identified_by_password | OFF   |
+| mysql_native_password_proxy_users     | OFF   |
+| old_passwords                         | 0     |
+| report_password                       |       |
+| sha256_password_proxy_users           | OFF   |
+| validate_password_check_user_name     | OFF   |
+| validate_password_dictionary_file     |       |
+| validate_password_length              | 8     |
+| validate_password_mixed_case_count    | 1     |
+| validate_password_number_count        | 1     |
+| validate_password_policy              | LOW   |
+| validate_password_special_char_count  | 1     |
++---------------------------------------+-------+
+14 rows in set (0.35 sec)</code></pre>
+<table>
+<thead>
+<tr>
+<th>Policy</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0 or LOW</td>
+<td align="center">Length</td>
+</tr>
+<tr>
+<td>1 or MEDIUM</td>
+<td align="center">Length;numeric,lowercase/uppercase,and special characters</td>
+</tr>
+<tr>
+<td>2 or STRONG</td>
+<td align="center">Lengt;numeric,lowercase/uppercase,and special characters;dictionary file</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h3 id="Linux防火墙相关"><a href="#Linux防火墙相关" class="headerlink" title="Linux防火墙相关"></a>Linux防火墙相关</h3><blockquote>
+<p>CentOS 7默认使用的是firewall作为防火墙</p>
+</blockquote>
+<ol>
+<li><p>查看防火墙运行状态</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost ~]# firewall-cmd --state
+running</code></pre>
+</li>
+<li><p>停止firewall</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost ~]# systemctl stop firewalld.service</code></pre>
+</li>
+<li><p>禁止firewall 开机自启</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost ~]# systemctl disable firewalld.service 
+Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service.
+Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.</code></pre>
+</li>
+</ol>
+<h3 id="Linux安装Redis"><a href="#Linux安装Redis" class="headerlink" title="Linux安装Redis"></a>Linux安装Redis</h3><ol>
+<li><p>下载源码包</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# wget http://download.redis.io/releases/redis-5.0.5.tar.gz</code></pre>
+</li>
+<li><p>解压 </p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# tar -zxvf redis-5.0.5.tar.gz </code></pre>
+</li>
+<li><p>进入源码包编译安装</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# cd redis-5.0.5
+[root@localhost redis-5.0.5]# make </code></pre>
+</li>
+<li><p>检验</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost redis-5.0.5]# cd src
+[root@localhost src]# redis-server 
+14627:C 05 Sep 2019 13:48:31.173 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+14627:C 05 Sep 2019 13:48:31.173 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=14627, just started</code></pre>
+</li>
+<li><p>更改配置设置后台运行</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# pwd
+/usr/local/src/redis-5.0.5/src
+[root@localhost src]# vim ../redis.conf 
+ 132 ################################# GENERAL #####################################
+ 133 
+ 134 # By default Redis does not run as a daemon. Use 'yes' if you need it.
+ 135 # Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
+ 136 daemonize no
+
+将136行修改为
+ 136 daemonize yes</code></pre>
+</li>
+</ol>
+<h4 id="Redis-daemonize介绍"><a href="#Redis-daemonize介绍" class="headerlink" title="Redis daemonize介绍"></a>Redis daemonize介绍</h4><ol>
+<li>daemonize介绍<ul>
+<li>redis.conf配置文件中daemonize守护线程，默认是NO</li>
+<li>daemonize是用来指定redis是否要用守护线程的方式启动</li>
+</ul>
+</li>
+<li>daemonize设置yes或者no的区别<ul>
+<li><code>daemonize yes</code>:redis采用的是单进程多线程的模式。当redis.conf中选项daemonize设置成yes时，代表开启守护进程模式。在该模式下，redis会在后台运行，并将进程pid号写入至redis.conf选项pidfile设置的文件中，此时redis将一直运行，除非手动kill该进程。</li>
+<li><code>daemonize no</code>:当daemonize选项设置成no时，当前界面将进入redis的命令行界面，exit强制退出或者关闭连接工具(putty,xshell等)都会导致redis进程退出。</li>
+</ul>
+</li>
+</ol>
+<h3 id="Tomcat的安装"><a href="#Tomcat的安装" class="headerlink" title="Tomcat的安装"></a>Tomcat的安装</h3><ol>
+<li><p>下载</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# wget http://us.mirrors.quenda.co/apache/tomcat/tomcat-8/v8.5.45/bin/apache-tomcat-8.5.45.tar.gz</code></pre>
+</li>
+<li><p>解压</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost src]# tar -zxvf apache-tomcat-8.5.45.tar.gz </code></pre>
+</li>
+<li><p>测试</p>
+<pre class=" language-sh"><code class="language-sh">[root@localhost bin]# cd /usr/local/src/apache-tomcat-8.5.45/bin
+[root@localhost bin]# sh catalina.sh run</code></pre>
+</li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff;
+        background-color: #22AB38;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff;
+        background-color: #019FE8;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs">
+                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
+                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                    <div id="wechat">
+                        <img src="/medias/reward/wx.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                    <div id="alipay">
+                        <img src="/medias/reward/zfb.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#reward .reward-link').on('click', function () {
+            $('#rewardModal').openModal();
+        });
+
+        $('#rewardModal .close').on('click', function () {
+            $('#rewardModal').closeModal();
+        });
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://letudou.github.io" class="b-link-green">乐土豆</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2019/09/07/linux-kai-fa-huan-jing-bu-shu/" class="b-link-green">Linux开发环境部署</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/09/07/linux-kai-fa-huan-jing-bu-shu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Linux开发环境部署">
+                        
+                        <span class="card-title">Linux开发环境部署</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">Linux开发环境部署Java环境部署
+下载对应tar.gz
+
+上传服务器
+
+服务器配置
+1.解压
+[root@localhost Java]# tar -zxvf jdk-8u211-linux-x64.tar.gz
+2.解压完毕需要配置</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            LeTuDou
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/09/07/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            LeTuDou
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 乐土豆<br />'
+            + '作者: LeTuDou<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://blinkfox.github.io/" target="_blank">Blinkfox</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">2.2k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/letudou" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+    <a href="mailto:letudou@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2726804696" class="tooltipped" data-tooltip="QQ联系我: 2726804696" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/js/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
