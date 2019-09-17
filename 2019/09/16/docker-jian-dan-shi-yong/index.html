@@ -4,16 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Web性能测试工具使用, JAVA,JavaBlog,Java">
-    <meta name="description" content="apache bench
-主要是用来测试apache的
+    <meta name="keywords" content="Docker简单使用, JAVA,JavaBlog,Java">
+    <meta name="description" content="Docker关键词
+镜像
+容器
+客户端
+主机
+仓库
 
-使用说明:
-ab -c 100 -n 1000 http://www.baidu.com/
--c 表示并发用户数
--n 表示请求总数
-测试结果:
-D:\httpd-2.4.41-o1">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +20,7 @@ D:\httpd-2.4.41-o1">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Web性能测试工具使用 | 乐土豆</title>
+    <title>Docker简单使用 | 乐土豆</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -231,13 +230,13 @@ D:\httpd-2.4.41-o1">
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Web性能测试工具使用
+                        Docker简单使用
                     </div>
                 </div>
             </div>
@@ -247,10 +246,80 @@ D:\httpd-2.4.41-o1">
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -259,12 +328,8 @@ D:\httpd-2.4.41-o1">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/" target="_blank">
-                                <span class="chip bg-color">Linux</span>
-                            </a>
-                        
-                            <a href="/tags/WebTest/" target="_blank">
-                                <span class="chip bg-color">WebTest</span>
+                            <a href="/tags/Docker/" target="_blank">
+                                <span class="chip bg-color">Docker</span>
                             </a>
                         
                     </div>
@@ -278,21 +343,21 @@ D:\httpd-2.4.41-o1">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-07
+                    2019-09-16
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.3k
+                        15
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        10 分
+                        1 分
                     </div>
                     
                 
@@ -308,260 +373,12 @@ D:\httpd-2.4.41-o1">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="apache-bench"><a href="#apache-bench" class="headerlink" title="apache bench"></a>apache bench</h3><blockquote>
-<p>主要是用来测试apache的</p>
-</blockquote>
-<p>使用说明:</p>
-<pre class=" language-sh"><code class="language-sh">ab -c 100 -n 1000 http://www.baidu.com/
--c 表示并发用户数
--n 表示请求总数</code></pre>
-<p>测试结果:</p>
-<pre class=" language-sh"><code class="language-sh">D:\httpd-2.4.41-o102s-x86-vc14-r2\Apache24\bin>ab -c 100 -n 1000 http://www.baidu.com/
-This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
-Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
-Licensed to The Apache Software Foundation, http://www.apache.org/
-
-Benchmarking www.baidu.com (be patient)
-Completed 100 requests
-Completed 200 requests
-Completed 300 requests
-Completed 400 requests
-Completed 500 requests
-Completed 600 requests
-Completed 700 requests
-Completed 800 requests
-Completed 900 requests
-Completed 1000 requests
-Finished 1000 requests
-
-Server Software:        BWS/1.1       #服务器软件版本
-Server Hostname:        www.baidu.com #请求的URL
-Server Port:            80              #请求的端口号
-
-Document Path:          /              #请求的服务器的路径
-Document Length:        153928 bytes    #页面长度   单位是字节
-
-Concurrency Level:      100                #并发请求量
-Time taken for tests:   62.017 seconds    #整个测试持续时间
-Complete requests:      1000            #完成的请求数
-Failed requests:        999                #失败的请求数
-   (Connect: 0, Receive: 0, Length: 999, Exceptions: 0)
-Total transferred:      154804172 bytes    #整个场景中网络传输量
-HTML transferred:       153843884 bytes #整个场景中的HTML内容传输量
-Requests per second:    16.12 [#/sec] (mean) #吞吐速率 *
-Time per request:       6201.745 [ms] (mean)  #用户平均请求等待时间 *
-Time per request:       62.017 [ms] (mean, across all concurrent requests) #服务器平均请求处理的时间 *
-Transfer rate:          2437.64 [Kbytes/sec] received  #平均每秒网络上的流量，可以帮助排除是否有存在网络流量过大导致响应时间延长的问题
-
-Connection Times (ms)
-              min  mean[+/-sd] median   max
-Connect:        8   62 820.5     15   15012
-Processing:    60 6023 8850.5   1599   32965
-Waiting:       12 2411 4824.5    771   16939
-Total:         72 6084 8893.9   1616   32983
-
-Percentage of the requests served within a certain time (ms)
-  50%   1616    #50%的用户的请求1616ms内返回
-  66%   1787
-  75%   2160
-  80%  16625
-  90%  17062
-  95%  31604
-  98%  32038
-  99%  32119
- 100%  32983 (longest request)</code></pre>
-<p>参数详解:</p>
-<pre class=" language-sh"><code class="language-sh">格式：ab [options] [http://]hostname[:port]/path
-参数说明：
--n requests Number of requests to perform
-//在测试会话中所执行的请求个数（本次测试总共要访问页面的次数）。默认时，仅执行一个请求。
-
--c concurrency Number of multiple requests to make
-//一次产生的请求个数（并发数）。默认是一次一个。
-
--t timelimit Seconds to max. wait for responses
-//测试所进行的最大秒数。其内部隐含值是-n 50000。它可以使对服务器的测试限制在一个固定的总时间以内。默认时，没有时间限制。
-
--p postfile File containing data to POST
-//包含了需要POST的数据的文件，文件格式如“p1=1&p2=2”.使用方法是 -p 111.txt 。 （配合-T）
-
--T content-type Content-type header for POSTing
-//POST数据所使用的Content-type头信息，如 -T “application/x-www-form-urlencoded” 。 （配合-p）
-
--v verbosity How much troubleshooting info to print
-//设置显示信息的详细程度 – 4或更大值会显示头信息， 3或更大值可以显示响应代码(404, 200等), 2或更大值可以显示警告和其他信息。 -V 显示版本号并退出。
-
--w Print out results in HTML tables
-//以HTML表的格式输出结果。默认时，它是白色背景的两列宽度的一张表。
-
--i Use HEAD instead of GET
-// 执行HEAD请求，而不是GET。
-
--x attributes String to insert as table attributes //用来设置输出结果的表格的table属性
--y attributes String to insert as tr attributes //用来设置输出结果的表格的tr属性
--z attributes String to insert as td or th attributes //用来设置输出结果的表格的th属性
-
--C attribute Add cookie, eg. -C “c1=1234,c2=2,c3=3″ (repeatable)
-//-C cookie-name=value 对请求附加一个Cookie:行。 其典型形式是name=value的一个参数对。此参数可以重复，用逗号分割。
-提示：可以借助session实现原理传递 JSESSIONID参数， 实现保持会话的功能，如
--C ” c1=1234,c2=2,c3=3, JSESSIONID=FF056CD16DA9D71CB131C1D56F0319F8″ 。
-
--H attribute Add Arbitrary header line, eg. ‘Accept-Encoding: gzip’ Inserted after all normal header lines. (repeatable)
-
--A attribute Add Basic WWW Authentication, the attributes
-are a colon separated username and password.
-
--P attribute Add Basic Proxy Authentication, the attributes
-are a colon separated username and password.
-
-//-P proxy-auth-username:password 对一个中转代理提供BASIC认证信任。用户名和密码由一个:隔开，并以base64编码形式发送。无论服务器是否需要(即, 是否发送了401认证需求代码)，此字符串都会被发送。
-
--X proxy:port Proxyserver and port number to use
-
--V Print version number and exit //打印版本号，然后退出
-
--k Use HTTP KeepAlive feature //使用http keepAlive 特性
-
--d Do not show percentiles served table.
-
--S Do not show confidence estimators and warnings.
-
--g filename Output collected data to gnuplot format file.
-
--e filename Output CSV file with percentages served
-
--h Display usage information (this message)
-//-attributes 设置属性的字符串. 缺陷程序中有各种静态声明的固定长度的缓冲区。另外，对命令行参数、服务器的响应头和其他外部输入的解析也很简单，这可能会有不良后果。它没有完整地实现 HTTP/1.x; 仅接受某些’预想’的响应格式。 strstr(3)的频繁使用可能会带来性能问题，即你可能是在测试ab而不是服务器的性能。</code></pre>
-<h3 id="http-load"><a href="#http-load" class="headerlink" title="http_load"></a>http_load</h3><blockquote>
-<p>http_load以并行复用的方式运行，用以测试web服务器的吞吐量与负载。<br>但是它不同于大多数压力测试工具，它可以以一个单一的进程运行，一般不会把客户机搞死。<br>还可以测试HTTPS类的网站请求。</p>
-</blockquote>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
-<li><p>下载</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost http_load-09Mar2016]# wget http://www.acme.com/software/http_load/http_load-09Mar2016.tar.gz</code></pre>
-</li>
-<li><p>编译</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost src]# cd http_load-09Mar2016
-[root@localhost http_load-09Mar2016]# make</code></pre>
-</li>
-<li><p>测试运行</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost http_load-09Mar2016]# vim urls.txt
-http://www.baidu.com/
-http://192.168.127.131:8080/
-[root@localhost http_load-09Mar2016]# ./http_load -rate 5 -seconds 10 urls.txt</code></pre>
-</li>
-</ol>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><ol>
-<li><p>新建一个urls.txt 用来存储目标url(每一个url独占一行)</p>
-</li>
-<li><p>使用命令</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost http_load-09Mar2016]# http_load -parallel 5 -seconds 10 urls.txt </code></pre>
-</li>
-<li><p>参数解析</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-parallel 简写-p</td>
-<td>含义是并发的用户进程数</td>
-</tr>
-<tr>
-<td>-fetches 简写-f</td>
-<td>含义是总计的访问次数</td>
-</tr>
-<tr>
-<td>-rate 简写-r</td>
-<td>含义是每秒的访问频率</td>
-</tr>
-<tr>
-<td>-seconds简写-s</td>
-<td>含义是总计的访问时间</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>举例说明</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost http_load-09Mar2016]# http_load -r 5 -s 10 urls.txt 
-49 fetches, 1 max parallel, 7.5419e+06 bytes, in 10.0004 seconds
-#在上面的测试中运行了49个请求，最大的并发进程数是1，总计传输的数据是7.5419e+06bytes，运行的时间是10.0004秒
-153916 mean bytes/connection 
-#说明每一连接平均传输的数据量
-4.89981 fetches/sec, 754162 bytes/sec 
-#每秒的响应请求为4.89981，每秒传递的数据为754162bytes/sec
-msecs/connect: 25.5803 mean, 57.465 max, 19.389 min
-#每连接的平均响应时间是25.5803 msecs,最大的响应时间57.465 msecs,最小的响应时间19.389 msecs
-msecs/first-response: 27.0916 mean, 46.482 max, 21.079 min
-#第一次平均响应时间是 27.0916 msecs,最大的响应时间46.482 msecs,最小的响应时间 21.079 msecs
-47 bad byte counts
-HTTP response codes:        
-  code 200 -- 49
-#打开响应页面的类型</code></pre>
-</li>
-</ol>
-<h3 id="webbench"><a href="#webbench" class="headerlink" title="webbench"></a>webbench</h3><blockquote>
-<p>webbench是Linux下的一个网站压力测试工具，最多可以模拟3万个并发连接去测试网站的负载能力</p>
-</blockquote>
-<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>1.下载</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost src]# wget http://soft.vpser.net/test/webbench/webbench-1.5.tar.gz</code></pre>
-<p>2.解压</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost webbench-1.5]# tar -zxvf webbench-1.5.tar.gz </code></pre>
-<p>3.安装ctags，编译</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost src]# yum install ctags -y
-[root@localhost src]# cd webbench-1.5
-[root@localhost webbench-1.5]# make</code></pre>
-<p>4.测试</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost webbench-1.5]# webbench -c 1 -t 5 http://192.168.127.131:8080/</code></pre>
-<h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><pre class=" language-sh"><code class="language-sh">用法：webbench -c 并发数 -t 运行测试时间 URL
-[root@localhost webbench-1.5]# webbench -c 1 -t 5 http://192.168.127.131:8080/
-Webbench - Simple Web Benchmark 1.5
-Copyright (c) Radim Kolar 1997-2004, GPL Open Source Software.
-
-Benchmarking: GET http://192.168.127.131:8080/
-1 client, running 5 sec.
-
-Speed=322032 pages/min, 60625932 bytes/sec.
-Requests: 26836 susceed, 0 failed.</code></pre>
-<h3 id="Siege"><a href="#Siege" class="headerlink" title="Siege"></a>Siege</h3><ul>
-<li><p>安装</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost src]# wget http://download.joedog.org/siege/siege-latest.tar.gz
-[root@localhost src]# tar -zxvf siege-latest.tar.gz 
-[root@localhost src]# cd siege-4.0.4/
-[root@localhost siege-4.0.4]# ./configure 
-[root@localhost siege-4.0.4]# make
-[root@localhost siege-4.0.4]# make install
-[root@localhost siege-4.0.4]# vim url.txt
-http://www.baidu.com/
-[root@localhost siege-4.0.4]# siege -c 1 -r 1 -f url.txt</code></pre>
-</li>
-<li><p>使用</p>
-<pre class=" language-sh"><code class="language-sh">[root@localhost siege-4.0.4]# siege -c 1 -r 1 -f url.txt
-** SIEGE 4.0.4
-** Preparing 1 concurrent users for battle.
-The server is now under siege...
-HTTP/1.1 200     0.10 secs:   39179 bytes ==> GET  /
-HTTP/1.1 200     0.07 secs:    1131 bytes ==> GET  /baidu.html?from=noscript
-HTTP/1.1 200     0.06 secs:      91 bytes ==> GET  /img/gs.gif
-HTTP/1.1 200     0.12 secs:    3757 bytes ==> GET  /5eN1bjq8AAUYm2zgoY3K/r/www/cache/bdorz/baidu.min.css
-HTTP/1.1 200     0.53 secs:   33167 bytes ==> GET  /r/www/cache/static/jquery/jquery-1.10.2.min_65682a2.js
-HTTP/1.1 200     0.07 secs:    6511 bytes ==> GET  /img/baidu_resultlogo@2.png
-HTTP/1.1 200     0.07 secs:     705 bytes ==> GET  /img/baidu_jgylogo3.gif
-HTTP/1.1 200     0.06 secs:    7877 bytes ==> GET  /img/bd_logo1.png
-
-Transactions:                   8 hits 完成8次处理
-Availability:              100.00 %    100.00 % 成功率
-Elapsed time:                1.08 secs 总共用时
-Data transferred:            0.09 MB   共数据传输0.09 MB
-Response time:                0.13 secs 显示网络连接的速度
-Transaction rate:            7.41 trans/sec 平均每秒完成 17.56 次处理
-Throughput:                0.08 MB/sec  平均每秒传送数据
-Concurrency:                1.00     实际最高并发数
-Successful transactions:           8 成功处理次数
-Failed transactions:               0 失败处理次数
-Longest transaction:            0.53 每次传输所花最长时间
-Shortest transaction:            0.06 每次传输所花最短时间</code></pre>
-</li>
+                <h3 id="Docker关键词"><a href="#Docker关键词" class="headerlink" title="Docker关键词"></a>Docker关键词</h3><ul>
+<li>镜像</li>
+<li>容器</li>
+<li>客户端</li>
+<li>主机</li>
+<li>仓库</li>
 </ul>
 
             </div>
@@ -703,7 +520,7 @@ Shortest transaction:            0.06 每次传输所花最短时间</code></pre
                     </span>
                     <a href="https://letudou.github.io" class="b-link-green">乐土豆</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/" class="b-link-green">Web性能测试工具使用</a>
+                    <a href="/2019/09/16/docker-jian-dan-shi-yong/" class="b-link-green">Docker简单使用</a>
                 </p>
             </div>
         </div>
@@ -724,9 +541,59 @@ Shortest transaction:            0.06 每次传输所花最短时间</code></pre
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/09/16/docker-jian-dan-shi-yong/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Docker简单使用">
+                        
+                        <span class="card-title">Docker简单使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">Docker关键词
+镜像
+容器
+客户端
+主机
+仓库
+
+</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            LeTuDou
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Docker/" target="_blank">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/09/15/markdown-ji-chu-yu-fa/">
                     <div class="card-image">
@@ -747,9 +614,9 @@ Shortest transaction:            0.06 每次传输所花最短时间</code></pre
 ###### 六级标题2.相当于闭合标签
 # 一级</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -763,55 +630,6 @@ Shortest transaction:            0.06 每次传输所花最短时间</code></pre
                     
                     <a href="/tags/MarkDown/" target="_blank">
                         <span class="chip bg-color">MarkDown</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/09/07/linux-kai-fa-huan-jing-bu-shu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Linux开发环境部署">
-                        
-                        <span class="card-title">Linux开发环境部署</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">Linux开发环境部署Java环境部署
-下载对应tar.gz
-
-上传服务器
-
-服务器配置
-1.解压
-[root@localhost Java]# tar -zxvf jdk-8u211-linux-x64.tar.gz
-2.解压完毕需要配置</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            LeTuDou
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -861,6 +679,53 @@ Shortest transaction:            0.06 每次传输所花最短时间</code></pre
     });
 </script>
 
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
     
 
 </main>

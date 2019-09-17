@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://letudou.github.io/"/>
-  <updated>2019-09-15T11:17:57.519Z</updated>
+  <updated>2019-09-16T05:20:32.060Z</updated>
   <id>https://letudou.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker简单使用</title>
+    <link href="https://letudou.github.io/2019/09/16/docker-jian-dan-shi-yong/"/>
+    <id>https://letudou.github.io/2019/09/16/docker-jian-dan-shi-yong/</id>
+    <published>2019-09-16T04:57:09.000Z</published>
+    <updated>2019-09-16T05:20:32.060Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Docker关键词&quot;&gt;&lt;a href=&quot;#Docker关键词&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Docker" scheme="https://letudou.github.io/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>MarkDown基础语法</title>
@@ -73,7 +98,7 @@
     <link href="https://letudou.github.io/2019/09/07/linux-kai-fa-huan-jing-bu-shu/"/>
     <id>https://letudou.github.io/2019/09/07/linux-kai-fa-huan-jing-bu-shu/</id>
     <published>2019-09-07T13:25:32.000Z</published>
-    <updated>2019-09-07T13:53:42.983Z</updated>
+    <updated>2019-09-17T07:03:57.769Z</updated>
     
     <summary type="html">
     

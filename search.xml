@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Docker简单使用</title>
+      <link href="/2019/09/16/docker-jian-dan-shi-yong/"/>
+      <url>/2019/09/16/docker-jian-dan-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Docker关键词"><a href="#Docker关键词" class="headerlink" title="Docker关键词"></a>Docker关键词</h3><ul><li>镜像</li><li>容器</li><li>客户端</li><li>主机</li><li>仓库</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MarkDown基础语法</title>
       <link href="/2019/09/15/markdown-ji-chu-yu-fa/"/>
       <url>/2019/09/15/markdown-ji-chu-yu-fa/</url>
