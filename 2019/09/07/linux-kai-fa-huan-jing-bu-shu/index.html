@@ -281,7 +281,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.1k
+                        2.2k
                     </div>
                     
 
@@ -397,11 +397,13 @@ nginx version: nginx/1.6.2</code></pre>
 [root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -t
 nginx: the configuration file /usr/local/webserver/nginx/conf/nginx.conf syntax is ok
 nginx: configuration file /usr/local/webserver/nginx/conf/nginx.conf test is successful
-2.重新载入配置文件
+3.启动Nginx
+[root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx
+4.重新载入配置文件
 [root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -s reload 
-3.重启 Nginx
+5.重启 Nginx
 [root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -s reopen 
-4.停止 Nginx
+6.停止 Nginx
 [root@localhost nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -s stop</code></pre>
 </li>
 </ol>
