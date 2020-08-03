@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>乐土豆</title>
+  <title>原来是小张</title>
   
-  <subtitle>乐土豆博客</subtitle>
+  <subtitle>小张的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://letudou.github.io/"/>
+  <link href="https://iscodeme.gitee.io/"/>
   <updated>2020-02-29T02:15:44.980Z</updated>
-  <id>https://letudou.github.io/</id>
+  <id>https://iscodeme.gitee.io/</id>
   
   <author>
-    <name>LeTuDou</name>
+    <name>小张:)</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>姬广亮 半小时学会用思维导图记笔记</title>
-    <link href="https://letudou.github.io/2020/01/30/ji-guang-liang-ban-xiao-shi-xue-hui-yong-si-wei-dao-tu-ji-bi-ji/"/>
-    <id>https://letudou.github.io/2020/01/30/ji-guang-liang-ban-xiao-shi-xue-hui-yong-si-wei-dao-tu-ji-bi-ji/</id>
+    <link href="https://iscodeme.gitee.io/2020/01/30/ji-guang-liang-ban-xiao-shi-xue-hui-yong-si-wei-dao-tu-ji-bi-ji/"/>
+    <id>https://iscodeme.gitee.io/2020/01/30/ji-guang-liang-ban-xiao-shi-xue-hui-yong-si-wei-dao-tu-ji-bi-ji/</id>
     <published>2020-01-30T05:35:38.000Z</published>
     <updated>2020-02-29T02:15:44.980Z</updated>
     
@@ -37,16 +37,16 @@
     
     
     
-      <category term="学习" scheme="https://letudou.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://iscodeme.gitee.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="思维导图" scheme="https://letudou.github.io/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+      <category term="思维导图" scheme="https://iscodeme.gitee.io/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
     
   </entry>
   
   <entry>
     <title>Docker简单使用</title>
-    <link href="https://letudou.github.io/2019/09/16/docker-jian-dan-shi-yong/"/>
-    <id>https://letudou.github.io/2019/09/16/docker-jian-dan-shi-yong/</id>
+    <link href="https://iscodeme.gitee.io/2019/09/16/docker-jian-dan-shi-yong/"/>
+    <id>https://iscodeme.gitee.io/2019/09/16/docker-jian-dan-shi-yong/</id>
     <published>2019-09-16T04:57:09.000Z</published>
     <updated>2019-09-16T05:20:32.060Z</updated>
     
@@ -64,14 +64,14 @@
     
     
     
-      <category term="Docker" scheme="https://letudou.github.io/tags/Docker/"/>
+      <category term="Docker" scheme="https://iscodeme.gitee.io/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>MarkDown基础语法</title>
-    <link href="https://letudou.github.io/2019/09/15/markdown-ji-chu-yu-fa/"/>
-    <id>https://letudou.github.io/2019/09/15/markdown-ji-chu-yu-fa/</id>
+    <link href="https://iscodeme.gitee.io/2019/09/15/markdown-ji-chu-yu-fa/"/>
+    <id>https://iscodeme.gitee.io/2019/09/15/markdown-ji-chu-yu-fa/</id>
     <published>2019-09-15T11:15:14.000Z</published>
     <updated>2020-02-29T02:18:20.745Z</updated>
     
@@ -89,14 +89,14 @@
     
     
     
-      <category term="MarkDown" scheme="https://letudou.github.io/tags/MarkDown/"/>
+      <category term="MarkDown" scheme="https://iscodeme.gitee.io/tags/MarkDown/"/>
     
   </entry>
   
   <entry>
     <title>Web性能测试工具使用</title>
-    <link href="https://letudou.github.io/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/"/>
-    <id>https://letudou.github.io/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/</id>
+    <link href="https://iscodeme.gitee.io/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/"/>
+    <id>https://iscodeme.gitee.io/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/</id>
     <published>2019-09-07T13:40:20.000Z</published>
     <updated>2020-02-29T02:16:55.050Z</updated>
     
@@ -114,16 +114,16 @@
     
     
     
-      <category term="Linux" scheme="https://letudou.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="https://iscodeme.gitee.io/tags/Linux/"/>
     
-      <category term="WebTest" scheme="https://letudou.github.io/tags/WebTest/"/>
+      <category term="WebTest" scheme="https://iscodeme.gitee.io/tags/WebTest/"/>
     
   </entry>
   
   <entry>
     <title>Linux开发环境部署</title>
-    <link href="https://letudou.github.io/2019/09/07/linux-kai-fa-huan-jing-bu-shu/"/>
-    <id>https://letudou.github.io/2019/09/07/linux-kai-fa-huan-jing-bu-shu/</id>
+    <link href="https://iscodeme.gitee.io/2019/09/07/linux-kai-fa-huan-jing-bu-shu/"/>
+    <id>https://iscodeme.gitee.io/2019/09/07/linux-kai-fa-huan-jing-bu-shu/</id>
     <published>2019-09-07T13:25:32.000Z</published>
     <updated>2019-09-17T07:32:26.614Z</updated>
     
@@ -141,7 +141,7 @@
     
     
     
-      <category term="Linux" scheme="https://letudou.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="https://iscodeme.gitee.io/tags/Linux/"/>
     
   </entry>
   
