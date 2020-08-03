@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iscodeme.gitee.io/"/>
-  <updated>2020-08-03T15:10:13.068Z</updated>
+  <updated>2020-08-03T15:35:17.923Z</updated>
   <id>https://iscodeme.gitee.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>数据库基础知识</title>
     <link href="https://iscodeme.gitee.io/2020/08/03/shu-ju-ku-ji-chu-zhi-shi/"/>
     <id>https://iscodeme.gitee.io/2020/08/03/shu-ju-ku-ji-chu-zhi-shi/</id>
     <published>2020-08-03T15:03:49.763Z</published>
-    <updated>2020-08-03T15:10:13.068Z</updated>
+    <updated>2020-08-03T15:35:17.923Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,14 @@
     </summary>
     
     
+      <category term="数据库" scheme="https://iscodeme.gitee.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="MySql" scheme="https://iscodeme.gitee.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySql/"/>
+    
+    
+      <category term="数据库" scheme="https://iscodeme.gitee.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="MySql" scheme="https://iscodeme.gitee.io/tags/MySql/"/>
     
   </entry>
   
@@ -44,7 +52,7 @@
     <link href="https://iscodeme.gitee.io/2020/01/30/ji-guang-liang-ban-xiao-shi-xue-hui-yong-si-wei-dao-tu-ji-bi-ji/"/>
     <id>https://iscodeme.gitee.io/2020/01/30/ji-guang-liang-ban-xiao-shi-xue-hui-yong-si-wei-dao-tu-ji-bi-ji/</id>
     <published>2020-01-30T05:35:38.000Z</published>
-    <updated>2020-02-29T02:15:44.980Z</updated>
+    <updated>2020-08-03T15:34:40.972Z</updated>
     
     <summary type="html">
     
@@ -58,6 +66,10 @@
     
     </summary>
     
+    
+      <category term="学习" scheme="https://iscodeme.gitee.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="思维导图" scheme="https://iscodeme.gitee.io/categories/%E5%AD%A6%E4%B9%A0/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
     
     
       <category term="学习" scheme="https://iscodeme.gitee.io/tags/%E5%AD%A6%E4%B9%A0/"/>
