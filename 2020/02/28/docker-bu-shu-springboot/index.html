@@ -4,15 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="MarkDown基础语法, JAVA,JavaBlog,Java">
-    <meta name="description" content="md语法学习标题1.前面带#号，后面带文字，分别表示h1-h6,只到h6，而且h1下面会有一条横线
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题2.相当于闭合标签
-# 一级">
+    <meta name="keywords" content="Docker部署SpringBoot, JAVA,JavaBlog,Java">
+    <meta name="description" content="Docker部署SpringBootDocker配置# Centos7开启方式
+vim /lib/systemd/system/docker.service
+# 找到 ExecStart并修改
+ExecStart=/usr/bin/dock">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MarkDown基础语法 | 原来是小张</title>
+    <title>Docker部署SpringBoot | 原来是小张</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -229,13 +225,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        MarkDown基础语法
+                        Docker部署SpringBoot
                     </div>
                 </div>
             </div>
@@ -257,8 +253,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/MarkDown/" target="_blank">
-                                <span class="chip bg-color">MarkDown</span>
+                            <a href="/tags/Docker/" target="_blank">
+                                <span class="chip bg-color">Docker</span>
                             </a>
                         
                     </div>
@@ -272,21 +268,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-15
+                    2020-02-28
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        828
+                        512
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        2 分
                     </div>
                     
                 
@@ -302,154 +298,99 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="md语法学习"><a href="#md语法学习" class="headerlink" title="md语法学习"></a>md语法学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>1.前面带#号，后面带文字，分别表示h1-h6,只到h6，而且h1下面会有一条横线</p>
-<pre><code># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题</code></pre><p>2.相当于闭合标签</p>
-<pre><code># 一级标题 #
-## 二级标题 ##
-### 三级标题 ###
-#### 四级标题 ####
-##### 五级标题 #####
-###### 六级标题 #####</code></pre><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1.无序列表</p>
-<pre><code>//形式一
-+ a
-+ b
-+ c  
-//形式二
-- a
-- b
-- c
-//形式三
-* a
-* b
-* c</code></pre><p>2.有序列表</p>
-<pre><code>//正常形式
-1. 1
-2. 2
-3. 3
-//错乱形式
-2. aa
-4. vv
-5. bb</code></pre><p>3.嵌套列表</p>
-<pre><code>+ a
-  1. a1
-  2. a2
-  3. a3
-+ b
-  2. b2
-  3. b3
-  4. b4
-* c
-  1. c1
-  2. c2
-  3. c3
-- d
-  1. d1
-  2. d2
-  4. d4
-1. A
-  + A1
-  * A2
-  - A3
-  1. A
-    + A1
-    * A2
-    - A3
-  2. A
-    + A1
-    * A2
-    - A3</code></pre><h2 id="引用说明区块"><a href="#引用说明区块" class="headerlink" title="引用说明区块"></a>引用说明区块</h2><p>1.正常形式</p>
-<pre><code>&gt; 引用内容、说明内容。在语句前面加一个 &gt; ，注意是英文的那个右尖括号，注意空格，引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。</code></pre><p>2.嵌套区块</p>
-<pre><code>&gt; 一级引用
-&gt;&gt; 二级引用
-&gt;&gt;&gt; 三级引用
-&gt;&gt;&gt;&gt; 四级引用
-&gt;&gt;&gt;&gt;&gt; 五级引用
-&gt;&gt;&gt;&gt;&gt;&gt; 六级引用</code></pre><blockquote>
-<p>一级引用</p>
-</blockquote>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>1.少量代码<br><code>public static void main(String[] args){}</code><br>2.大量代码</p>
-<pre><code>public static void main(String[] args){
-  System.out.pringln(&quot;你好，世界&quot;);
-}
-</code></pre><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>1.行内式<br>链接的文字放在[]中，链接地址放在随后的()中，链接也可以带title属性，链接地址后面空一格，然后用引号引起来</p>
-<pre><code>[简书](https://www.jianshu.com ),</code></pre><p><a href="https://www.jianshu.com" target="_blank" rel="noopener">简书</a>,<br>是一个创作社区,任何人均可以在其上进行创作。用户在简书上面可以方便的创作自己的作品,互相交流。</p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>1.行内式<br>和链接的形式差不多，图片的名字放在[]中，图片地址放在随后的()中，title属性（图片地址后面空一格，然后用引号引起来）,注意的是[]前要加上!</p>
-<pre><code>![猴子](https://raw.githubusercontent.com/LeTuDou/images/master/20190811000823.jpg)
-</code></pre><p><img src="/images/yt.jpg" alt="本地"><br><img src="https://raw.githubusercontent.com/LeTuDou/images/master/20190811000823.jpg" alt="远程"></p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><pre><code>分割线可以由* - _（星号，减号，底线）这3个符号的至少3个符号表示，注意至少要3个，且不需要连续，有空格也可以
----
-- - -
-------
-***
-* * *
-******
-___
-_ _ _
-______</code></pre><hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><pre><code>1.强调字体
-一个星号或者是一个下划线包起来，会转换为&lt;em&gt;倾斜，如果是2个，会转换为&lt;strong&gt;加粗
-*md*    
-**md**
-_md_   
- __md__</code></pre><p><em>md</em>  </p>
-<pre><code>2.基本上和js转义一样,\加需要转义的字符
-\\
-\*
-\+
-\-
-\`
-\_</code></pre><p>1+2=3</p>
-<pre><code>3.删除线
-用~~把需要显示删除线的字符包裹起来
-~~删除线~~</code></pre><p>什么是删除线?这就是<del>删除线</del>!原来是这样的</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><pre><code>|123|234|345|
-|:-|:-:|-:|
-|abc|bcd|cde|
-|abc|bcd|cde|
-|abc|bcd|cde|
+                <h2 id="Docker部署SpringBoot"><a href="#Docker部署SpringBoot" class="headerlink" title="Docker部署SpringBoot"></a>Docker部署SpringBoot</h2><h3 id="Docker配置"><a href="#Docker配置" class="headerlink" title="Docker配置"></a>Docker配置</h3><pre class=" language-shell"><code class="language-shell"># Centos7开启方式
+vim /lib/systemd/system/docker.service
+# 找到 ExecStart并修改
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
+# 重启docker
+sudo systemctl daemon-reload #守护进程重启
+systemctl restart docker #重启docker服务
+# 检验
+curl http://localhost:2375/version</code></pre>
+<pre class=" language-sh"><code class="language-sh"># 记录Ubuntu开启docker 远程访问API
+vim /lib/systemd/system/docker.service
 
-|123|234|345|
-|:---|:---:|---:|
-|abc|bcd|cde|
-|abc|bcd|cde|
-|abc|bcd|cde|
 
-123|234|345
-:-|:-:|-:
-abc|bcd|cde
-abc|bcd|cde
-abc|bcd|cde
-上面三个例子的效果一样，由此可得：
-1. 表格的格式不一定要对的非常起，但是为了良好的变成风格，尽量对齐是最好的
-2. 分割线后面的冒号表示对齐方式，写在左边表示左对齐，右边为右对齐，两边都写表示居中</code></pre><table>
-<thead>
-<tr>
-<th align="left">123</th>
-<th align="center">234</th>
-<th align="right">345</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">abc</td>
-<td align="center">bcd</td>
-<td align="right">cde</td>
-</tr>
-<tr>
-<td align="left">abc</td>
-<td align="center">bcd</td>
-<td align="right">cde</td>
-</tr>
-<tr>
-<td align="left">abc</td>
-<td align="center">bcd</td>
-<td align="right">cde</td>
-</tr>
-</tbody></table>
+# 找到ExecStart
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
+
+# 重启docker
+sudo systemctl daemon-reload #守护进程重启
+systemctl restart docker #重启docker服务
+# 检验
+curl http://localhost:2375/version</code></pre>
+<p>常用命令</p>
+<pre class=" language-shell"><code class="language-shell">#启动
+systemctl start docker
+#守护进程重启  
+sudo systemctl daemon-reload
+#重启docker服务  
+systemctl restart docker  
+sudo service docker restart
+#关闭docker   
+service docker stop   
+systemctl stop docker</code></pre>
+<h3 id="创建SpringBoot"><a href="#创建SpringBoot" class="headerlink" title="创建SpringBoot"></a>创建SpringBoot</h3><h4 id="创建测试Controller"><a href="#创建测试Controller" class="headerlink" title="创建测试Controller"></a>创建测试Controller</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestMapping<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RestController<span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">helloWorld</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"hello Docker-SpringBoot"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="配置项目构建信息"><a href="#配置项目构建信息" class="headerlink" title="配置项目构建信息"></a>配置项目构建信息</h4><pre class=" language-xml"><code class="language-xml"> <span class="token comment" spellcheck="true">&lt;!--复制jar包到指定目录--></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>maven-antrun-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executions</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>execution</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>gen-webadmin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phase</span><span class="token punctuation">></span></span>package<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>phase</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tasks</span><span class="token punctuation">></span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>copy</span> <span class="token attr-name">todir</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>docker<span class="token punctuation">"</span></span> <span class="token attr-name">file</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>target/${project.artifactId}-${project.version}.${project.packaging}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tasks</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span><span class="token punctuation">></span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goal</span><span class="token punctuation">></span></span>run<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>goal</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>goals</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>execution</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executions</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span></code></pre>
+<h4 id="编辑Dockerfile"><a href="#编辑Dockerfile" class="headerlink" title="编辑Dockerfile"></a>编辑Dockerfile</h4><p>项目根目录创建docker文件夹</p>
+<p><img src="/2020/02/28/docker-bu-shu-springboot/image-20200228113821246.png" alt="项目目录"></p>
+<p>编辑<code>Dockerfile</code>文件</p>
+<pre class=" language-dockerfile"><code class="language-dockerfile">FROM java:8u111
+MAINTAINER xiaozhang letudou@qq.com
+VOLUME /temp
+ADD *.jar app.jar
+RUN bash -c 'touch /app.jar'
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]</code></pre>
+<ol>
+<li><p>另外项目端口需要改为8080</p>
+</li>
+<li><p>对Dockerfile里面的内容做一个简单的介绍:</p>
+<pre class=" language-html"><code class="language-html"> 1.FROM:指明当前镜像继承的基镜像,编译当前镜像时候会自动下载基镜像
+ 2.MAINTAINER:当前镜像的作者和邮箱,使用空格隔开
+ 3.VOLUME:挂载目录
+ 4.ADD:从当前工作目录复制文件到镜像目录中并重新命名
+ 5.RUN:在当前镜像上执行Linux命令,这里我执行了2个run指令
+ 6.EXPOSE:监听的端口号
+ 7.ENTRYPOINT:让容器像一个可执行程序一样运行</code></pre>
+</li>
+</ol>
+<h4 id="Idea-连接Docker"><a href="#Idea-连接Docker" class="headerlink" title="Idea 连接Docker"></a>Idea 连接Docker</h4><p>前提条件 请确保安装 docker插件</p>
+<p><img src="/2020/02/28/docker-bu-shu-springboot/image-20200228114403646.png" alt="Idea 连接Docker-1"></p>
+<p>点击ok后</p>
+<p><img src="/2020/02/28/docker-bu-shu-springboot/image-20200228114612653.png" alt="Idea 连接Docker-2"></p>
+<h4 id="添加启动项"><a href="#添加启动项" class="headerlink" title="添加启动项"></a>添加启动项</h4><p><img src="/2020/02/28/docker-bu-shu-springboot/image-20200228114643083.png" alt="添加启动项"></p>
+<p><img src="/2020/02/28/docker-bu-shu-springboot/image-20200228114901617.png" alt="image-20200228114901617"></p>
+<p><img src="/2020/02/28/docker-bu-shu-springboot/image-20200228115000249.png" alt="添加一个maven任务"></p>
+<p>编辑    <code>clean package -Dmaven.test.skip=true</code></p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p><img src="/2020/02/28/docker-bu-shu-springboot/image-20200228115133005.png" alt="image-20200228115133005"></p>
+<p><img src="/2020/02/28/docker-bu-shu-springboot/image-20200228115146048.png" alt="image-20200228115146048"></p>
 
             </div>
             <hr/>
@@ -590,7 +531,7 @@ abc|bcd|cde
                     </span>
                     <a href="https://iscodeme.gitee.io" class="b-link-green">原来是小张</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/09/15/markdown-ji-chu-yu-fa/" class="b-link-green">MarkDown基础语法</a>
+                    <a href="/2020/02/28/docker-bu-shu-springboot/" class="b-link-green">Docker部署SpringBoot</a>
                 </p>
             </div>
         </div>
@@ -615,6 +556,65 @@ abc|bcd|cde
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/08/03/shu-ju-ku-ji-chu-zhi-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="数据库基础知识">
+                        
+                        <span class="card-title">数据库基础知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">数据库基础知识三大范式
+第一范式的目标是确保每列的原子性，每列都是不可再分的最小数据单元。
+第二范式要求每个表只描述一件事情
+第三范式要求表中的各列必须和主键直接相关，不能间接相关
+
+MySQL的运行机制
+基础SQL语句==使用数据前必须先</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/数据库/" class="post-category" target="_blank">
+                                    数据库
+                                </a>
+                            
+                            <a href="/categories/数据库/MySql/" class="post-category" target="_blank">
+                                    MySql
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/数据库/" target="_blank">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                    <a href="/tags/MySql/" target="_blank">
+                        <span class="chip bg-color">MySql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/01/30/ji-guang-liang-ban-xiao-shi-xue-hui-yong-si-wei-dao-tu-ji-bi-ji/">
                     <div class="card-image">
                         
@@ -629,9 +629,9 @@ abc|bcd|cde
 ​    
 思维导图的作用​    过去</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -657,59 +657,6 @@ abc|bcd|cde
                     
                     <a href="/tags/思维导图/" target="_blank">
                         <span class="chip bg-color">思维导图</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Web性能测试工具使用">
-                        
-                        <span class="card-title">Web性能测试工具使用</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">apache bench
-主要是用来测试apache的
-
-使用说明:
-ab -c 100 -n 1000 http://www.baidu.com/
--c 表示并发用户数
--n 表示请求总数
-测试结果:
-D:\httpd-2.4.41-o1</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            小张
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/WebTest/" target="_blank">
-                        <span class="chip bg-color">WebTest</span>
                     </a>
                     
                 </div>

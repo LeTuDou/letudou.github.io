@@ -4,11 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Docker部署SpringBoot, JAVA,JavaBlog,Java">
-    <meta name="description" content="Docker部署SpringBootDocker配置# Centos7开启方式
-vim /lib/systemd/system/docker.service
-# 找到 ExecStart并修改
-ExecStart=/usr/bin/dock">
+    <meta name="keywords" content="Redis入门知识, JAVA,JavaBlog,Java">
+    <meta name="description" content="Redis入门知识
+
+Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-value数据库。
+
+内存存储和持久化&amp;nbsp;&amp;nbsp;Redis 数据库中的所有数据都存储在内存中，由于内存读写速度远远超过硬盘的读写速度,相">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@ ExecStart=/usr/bin/dock">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Docker部署SpringBoot | 原来是小张</title>
+    <title>Redis入门知识 | 原来是小张</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -231,7 +232,7 @@ ExecStart=/usr/bin/dock">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Docker部署SpringBoot
+                        Redis入门知识
                     </div>
                 </div>
             </div>
@@ -253,8 +254,8 @@ ExecStart=/usr/bin/dock">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Docker/" target="_blank">
-                                <span class="chip bg-color">Docker</span>
+                            <a href="/tags/Redis/" target="_blank">
+                                <span class="chip bg-color">Redis</span>
                             </a>
                         
                     </div>
@@ -275,14 +276,14 @@ ExecStart=/usr/bin/dock">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        512
+                        2.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        11 分
                     </div>
                     
                 
@@ -298,99 +299,310 @@ ExecStart=/usr/bin/dock">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Docker部署SpringBoot"><a href="#Docker部署SpringBoot" class="headerlink" title="Docker部署SpringBoot"></a>Docker部署SpringBoot</h2><h3 id="Docker配置"><a href="#Docker配置" class="headerlink" title="Docker配置"></a>Docker配置</h3><pre class=" language-shell"><code class="language-shell"># Centos7开启方式
-vim /lib/systemd/system/docker.service
-# 找到 ExecStart并修改
-ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
-# 重启docker
-sudo systemctl daemon-reload #守护进程重启
-systemctl restart docker #重启docker服务
-# 检验
-curl http://localhost:2375/version</code></pre>
-<pre class=" language-sh"><code class="language-sh"># 记录Ubuntu开启docker 远程访问API
-vim /lib/systemd/system/docker.service
-
-
-# 找到ExecStart
-ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
-
-# 重启docker
-sudo systemctl daemon-reload #守护进程重启
-systemctl restart docker #重启docker服务
-# 检验
-curl http://localhost:2375/version</code></pre>
-<p>常用命令</p>
-<pre class=" language-shell"><code class="language-shell">#启动
-systemctl start docker
-#守护进程重启  
-sudo systemctl daemon-reload
-#重启docker服务  
-systemctl restart docker  
-sudo service docker restart
-#关闭docker   
-service docker stop   
-systemctl stop docker</code></pre>
-<h3 id="创建SpringBoot"><a href="#创建SpringBoot" class="headerlink" title="创建SpringBoot"></a>创建SpringBoot</h3><h4 id="创建测试Controller"><a href="#创建测试Controller" class="headerlink" title="创建测试Controller"></a>创建测试Controller</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestMapping<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RestController<span class="token punctuation">;</span>
-
-<span class="token annotation punctuation">@RestController</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>
-    <span class="token keyword">public</span> String <span class="token function">helloWorld</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"hello Docker-SpringBoot"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<h4 id="配置项目构建信息"><a href="#配置项目构建信息" class="headerlink" title="配置项目构建信息"></a>配置项目构建信息</h4><pre class=" language-xml"><code class="language-xml"> <span class="token comment" spellcheck="true">&lt;!--复制jar包到指定目录--></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>maven-antrun-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executions</span><span class="token punctuation">></span></span>
-                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>execution</span><span class="token punctuation">></span></span>
-                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>gen-webadmin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
-                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phase</span><span class="token punctuation">></span></span>package<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>phase</span><span class="token punctuation">></span></span>
-                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
-                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tasks</span><span class="token punctuation">></span></span>
-                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>copy</span> <span class="token attr-name">todir</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>docker<span class="token punctuation">"</span></span> <span class="token attr-name">file</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>target/${project.artifactId}-${project.version}.${project.packaging}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tasks</span><span class="token punctuation">></span></span>
-                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
-                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span><span class="token punctuation">></span></span>
-                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goal</span><span class="token punctuation">></span></span>run<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>goal</span><span class="token punctuation">></span></span>
-                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>goals</span><span class="token punctuation">></span></span>
-                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>execution</span><span class="token punctuation">></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executions</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span></code></pre>
-<h4 id="编辑Dockerfile"><a href="#编辑Dockerfile" class="headerlink" title="编辑Dockerfile"></a>编辑Dockerfile</h4><p>项目根目录创建docker文件夹</p>
-<p><img src="/2020/08/04/docker-bu-shu-springboot/image-20200228113821246.png" alt="项目目录"></p>
-<p>编辑<code>Dockerfile</code>文件</p>
-<pre class=" language-dockerfile"><code class="language-dockerfile">FROM java:8u111
-MAINTAINER xiaozhang letudou@qq.com
-VOLUME /temp
-ADD *.jar app.jar
-RUN bash -c 'touch /app.jar'
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]</code></pre>
+                <h2 id="Redis入门知识"><a href="#Redis入门知识" class="headerlink" title="Redis入门知识"></a>Redis入门知识</h2><hr>
+<blockquote>
+<p>Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-value数据库。</p>
+</blockquote>
+<h3 id="内存存储和持久化"><a href="#内存存储和持久化" class="headerlink" title="内存存储和持久化"></a>内存存储和持久化</h3><p>&nbsp;&nbsp;Redis 数据库中的所有数据都存储在内存中，由于内存读写速度远远超过硬盘的读写速度,相比较其他基于硬盘存储的数据数据库有很明显的优势。<br>&nbsp;&nbsp;将数据全部存在内存中比较不稳妥，如果由于不可抗力因素主机断电数据会丢失。Redis提供了对持久化的支持，也就是将内存中的数据异步备份写入到硬盘，并提供两种方式，分别是RDB （Redis DataBase）和 AOF （Append Only File）;</p>
+<h3 id="Redis的安装"><a href="#Redis的安装" class="headerlink" title="Redis的安装"></a>Redis的安装</h3><ol>
+<li>在Linux中的安装<pre><code>wget http://download.redis.io/releases/redis-5.0.5.tar.gz
+tar xvf redis-5.0.5.tar.gz
+cd redis-5.0.5
+make</code></pre>make完后 redis-5.0.5目录下会出现编译后的redis服务程序redis-server,还有用于测试的客户端程序redis-cli</li>
+<li>在Windows中的安装<br>下载地址：<a href="https://github.com/dmajkic/redis/downloads" target="_blank" rel="noopener">https://github.com/dmajkic/redis/downloads</a> 根据自己情况下载对应版本，支持32位和64位<br>解压到某一目录。</li>
+</ol>
+<h3 id="文件介绍-以Windows为例"><a href="#文件介绍-以Windows为例" class="headerlink" title="文件介绍(以Windows为例)"></a>文件介绍(以Windows为例)</h3><table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">redis-server</td>
+<td align="center">Redis服务端程序</td>
+</tr>
+<tr>
+<td align="left">redis-cli</td>
+<td align="center">Redis命令行客户端</td>
+</tr>
+<tr>
+<td align="left">redis-benchmark</td>
+<td align="center">Redis性能测试工具</td>
+</tr>
+<tr>
+<td align="left">redis-check-aof</td>
+<td align="center">AOF文件修复工具</td>
+</tr>
+<tr>
+<td align="left">redis-check-dump</td>
+<td align="center">RDB文件修复工具</td>
+</tr>
+</tbody></table>
+<h3 id="Redis启动与停止"><a href="#Redis启动与停止" class="headerlink" title="Redis启动与停止"></a>Redis启动与停止</h3><p>&nbsp;&nbsp;&nbsp;Redis启动方式:直接运行redis-server即可启动Redis;Redis默认使用6379端口，找到配置文件第25行:<code>port 6379</code>可自定义修改<br>&nbsp;&nbsp;&nbsp;Redis停止方式:</p>
 <ol>
-<li><p>另外项目端口需要改为8080</p>
+<li>命令行结束redis-server进程</li>
+<li>redis-cli SHUTDOWN</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一种方式会导致数据丢失,不推荐使用<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二种方式当Redis收到 <code>SHUTDOWN</code>命令后,会先断开所有客户端连接,然后根据配置执行持久化,最后完成退出。Redis可以稳妥处理<code>SIGTERM</code>信号,所以使用<code>kill</code>Redis进程的<code>PID</code> 也可以正常结束Redis,效果与发送<code>SHUTDOWN</code>命令一样。</p>
+<h3 id="Redis数据类型"><a href="#Redis数据类型" class="headerlink" title="Redis数据类型"></a>Redis数据类型</h3><ol>
+<li><p>Redis的五大数据类型</p>
+<ul>
+<li>String (字符串)<ul>
+<li>一个key对应一个value</li>
+<li>二进制安全 redis的String可以包含任何数据，比如二进制jpg图片或者序列化的对象</li>
+<li>一个Redis中字符串value最多是512MB</li>
+</ul>
 </li>
-<li><p>对Dockerfile里面的内容做一个简单的介绍:</p>
-<pre class=" language-html"><code class="language-html"> 1.FROM:指明当前镜像继承的基镜像,编译当前镜像时候会自动下载基镜像
- 2.MAINTAINER:当前镜像的作者和邮箱,使用空格隔开
- 3.VOLUME:挂载目录
- 4.ADD:从当前工作目录复制文件到镜像目录中并重新命名
- 5.RUN:在当前镜像上执行Linux命令,这里我执行了2个run指令
- 6.EXPOSE:监听的端口号
- 7.ENTRYPOINT:让容器像一个可执行程序一样运行</code></pre>
+<li>Hash  (哈希,类似Java的Map)<ul>
+<li>是一个键值对集合</li>
+<li>是一个String类型的fieId 和value的映射表, Hash特别适合用于存储对象</li>
+</ul>
+</li>
+<li>List  (列表)<ul>
+<li>简单的字符串列表，按照插入顺序排序,添加一个元素到列表的头部(左边)或者尾部(右边)</li>
+<li>底层是一个链表</li>
+</ul>
+</li>
+<li>Set   (集合)<ul>
+<li>是String类型的无序集合</li>
+<li>通过HashTable实现的</li>
+</ul>
+</li>
+<li>Zset  (sorted set:有序集合)<ul>
+<li>Zset和Set同样都是String类型元素的集合,且不允许出现重复的成员</li>
+<li>不同的是Zset每个元素都会关联一个double类型的分数</li>
+<li>Zset的成员唯一,但分数却可以重复,通过分数排序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Redis键(key)举例</p>
+<ul>
+<li><p>EXISTS key的名字,判断某个key是否存在</p>
+<pre><code>redis 127.0.0.1:6379&gt; EXISTS k1
+(integer) 1
+redis 127.0.0.1:6379&gt; EXISTS k
+(integer) 0
+redis 127.0.0.1:6379&gt;</code></pre></li>
+<li><p>move key db 当前库中没有，移动到指定的库中</p>
+<pre><code>redis 127.0.0.1:6379&gt; move k3 7
+(integer) 1
+redis 127.0.0.1:6379&gt; keys *
+1) &quot;k4&quot;
+2) &quot;k1&quot;
+3) &quot;k2&quot;
+redis 127.0.0.1:6379&gt; SELECT 7
+OK
+redis 127.0.0.1:6379[7]&gt; keys *
+1) &quot;k3&quot;
+redis 127.0.0.1:6379&gt;</code></pre></li>
+<li><p>expire key 秒: 给指定的key设置过期时间;ttl key:以秒为单位返回 key 的剩余过期时间(在 Redis 2.8 以前，当 key 不存在，或者 key 没有设置剩余生存时间时，命令都返回 -1 )</p>
+<pre><code>redis 127.0.0.1:6379[7]&gt; SELECT 0
+OK
+redis 127.0.0.1:6379&gt; keys *
+1) &quot;k4&quot;
+2) &quot;k1&quot;
+3) &quot;k2&quot;
+redis 127.0.0.1:6379&gt; expire k2 10
+(integer) 1
+redis 127.0.0.1:6379&gt; ttl k2
+(integer) 7
+redis 127.0.0.1:6379&gt; ttl k2
+(integer) 5
+redis 127.0.0.1:6379&gt; ttl k2
+(integer) 4
+redis 127.0.0.1:6379&gt; ttl k2
+(integer) -1
+redis 127.0.0.1:6379&gt; keys *
+1) &quot;k4&quot;
+2) &quot;k1&quot;
+redis 127.0.0.1:6379&gt; ttl k1
+(integer) -1
+redis 127.0.0.1:6379&gt; ttl k2
+(integer) -1
+redis 127.0.0.1:6379&gt;</code></pre></li>
+<li><p>type key:查看当前key的类型</p>
+<pre><code>redis 127.0.0.1:6379&gt; set k1 types
+OK
+redis 127.0.0.1:6379&gt; type k1
+string
+redis 127.0.0.1:6379&gt;  lpush myList 1 2 3 4 5
+(integer) 5
+redis 127.0.0.1:6379&gt; type myList
+list
+redis 127.0.0.1:6379&gt; LRANGE myList 0 -1
+1) &quot;5&quot;
+2) &quot;4&quot;
+3) &quot;3&quot;
+4) &quot;2&quot;
+5) &quot;1&quot;
+redis 127.0.0.1:6379&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p>Redis字符串(String)举例</p>
+<ul>
+<li><p>set/get/del/append/strlen</p>
+<pre><code>redis 127.0.0.1:6379&gt; set k1 v1
+OK
+redis 127.0.0.1:6379&gt; get k1
+&quot;v1&quot;
+redis 127.0.0.1:6379&gt; append k1 v1
+(integer) 4
+redis 127.0.0.1:6379&gt; get k1
+&quot;v1v1&quot;
+redis 127.0.0.1:6379&gt; strlen k1
+(integer) 4
+redis 127.0.0.1:6379&gt; keys *
+1) &quot;k1&quot;
+redis 127.0.0.1:6379&gt; del k1
+(integer) 1
+redis 127.0.0.1:6379&gt; keys *
+(empty list or set)
+redis 127.0.0.1:6379&gt;</code></pre></li>
+<li><p>incrby/decrby 一定是数字才可以进行加减</p>
+<pre><code>redis 127.0.0.1:6379&gt; set k2 0
+OK
+redis 127.0.0.1:6379&gt; INCRBY k2 1
+(integer) 1
+redis 127.0.0.1:6379&gt; INCRBY k2 1
+(integer) 2
+redis 127.0.0.1:6379&gt; INCRBY k2 1
+(integer) 3
+redis 127.0.0.1:6379&gt; decrBy k2 1
+(integer) 2
+redis 127.0.0.1:6379&gt; decrBy k2 1
+(integer) 1
+redis 127.0.0.1:6379&gt; get k2
+&quot;1&quot;
+redis 127.0.0.1:6379&gt;</code></pre></li>
+<li><p>getrange/setrange</p>
+<pre><code>redis 127.0.0.1:6379&gt; set k1 aaabbbccc
+OK
+redis 127.0.0.1:6379&gt; getrange k1 0 -1
+&quot;aaabbbccc&quot;
+redis 127.0.0.1:6379&gt; getrange k1 0 3
+&quot;aaab&quot;
+redis 127.0.0.1:6379&gt; setrange k1 3 ddd
+(integer) 9
+redis 127.0.0.1:6379&gt; getrange k1 0 -1
+&quot;aaadddccc&quot;
+redis 127.0.0.1:6379&gt;</code></pre></li>
+<li><p>setex(set with expire)键秒值/setnx(set if not exist)</p>
+<pre><code>redis 127.0.0.1:6379&gt; setex k3 10 v3
+OK
+redis 127.0.0.1:6379&gt; ttl k3
+(integer) 7
+redis 127.0.0.1:6379&gt; ttl k3
+(integer) 6
+redis 127.0.0.1:6379&gt; ttl k3
+(integer) 5
+redis 127.0.0.1:6379&gt; ttl k3
+(integer) 5
+redis 127.0.0.1:6379&gt; ttl k3
+(integer) 4
+redis 127.0.0.1:6379&gt; get k3
+(nil)
+redis 127.0.0.1:6379&gt; get k1
+&quot;aaadddccc&quot;
+redis 127.0.0.1:6379&gt; setnx k1 aaaaaaaa
+(integer) 0
+redis 127.0.0.1:6379&gt; get k1
+&quot;aaadddccc&quot;
+redis 127.0.0.1:6379&gt;</code></pre></li>
+<li><p>mset/mget/msetnx</p>
+<pre><code>redis 127.0.0.1:6379&gt; mset k1 v1 k2 v2 k3 v3 k4 v4
+OK
+redis 127.0.0.1:6379&gt; mget k1 k2 k3 k4
+1) &quot;v1&quot;
+2) &quot;v2&quot;
+3) &quot;v3&quot;
+4) &quot;v4&quot;
+redis 127.0.0.1:6379&gt;</code></pre></li>
+</ul>
 </li>
 </ol>
-<h4 id="Idea-连接Docker"><a href="#Idea-连接Docker" class="headerlink" title="Idea 连接Docker"></a>Idea 连接Docker</h4><p>前提条件 请确保安装 docker插件</p>
-<p><img src="/2020/08/04/docker-bu-shu-springboot/image-20200228114403646.png" alt="Idea 连接Docker-1"></p>
-<p>点击ok后</p>
-<p><img src="/2020/08/04/docker-bu-shu-springboot/image-20200228114612653.png" alt="Idea 连接Docker-2"></p>
-<h4 id="添加启动项"><a href="#添加启动项" class="headerlink" title="添加启动项"></a>添加启动项</h4><p><img src="/2020/08/04/docker-bu-shu-springboot/image-20200228114643083.png" alt="添加启动项"></p>
-<p><img src="/2020/08/04/docker-bu-shu-springboot/image-20200228114901617.png" alt="image-20200228114901617"></p>
-<p><img src="/2020/08/04/docker-bu-shu-springboot/image-20200228115000249.png" alt="添加一个maven任务"></p>
-<p>编辑    <code>clean package -Dmaven.test.skip=true</code></p>
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p><img src="/2020/08/04/docker-bu-shu-springboot/image-20200228115133005.png" alt="image-20200228115133005"></p>
-<p><img src="/2020/08/04/docker-bu-shu-springboot/image-20200228115146048.png" alt="image-20200228115146048"></p>
+<h3 id="Redis命令行客户端使用"><a href="#Redis命令行客户端使用" class="headerlink" title="Redis命令行客户端使用"></a>Redis命令行客户端使用</h3><ol>
+<li>启动服务端<br><code>redis-server</code></li>
+<li>连接客户端<br><code>redis-cli -h 127.0.0.1 -p 6379</code></li>
+<li>连通性测试<pre><code>redis 127.0.0.1:6379&gt; ping
+PONG
+redis 127.0.0.1:6379&gt; echo hello
+&quot;hello&quot;
+redis 127.0.0.1:6379&gt;</code></pre></li>
+<li>举例读取操作<pre><code>redis 127.0.0.1:6379&gt; SET name &quot;LeTuDou&quot;
+OK
+redis 127.0.0.1:6379&gt; get name
+&quot;LeTuDou&quot;
+redis 127.0.0.1:6379&gt;</code></pre></li>
+<li>演示操作<br>Redis默认16个数据库 可以通过select num切换数据库 其中num大于等于0小于等于16减1一下举例切换到第8个数据库</li>
+</ol>
+<pre><code>redis 127.0.0.1:6379&gt; select 7
+OK
+redis 127.0.0.1:6379[7]&gt; select 0
+OK
+redis 127.0.0.1:6379&gt;
+</code></pre><p>DBSIZE命令查看当前数据库中key的数量;keys * 查看当前数据库中key</p>
+<pre><code>redis 127.0.0.1:6379&gt; DBSIZE
+(integer) 1
+redis 127.0.0.1:6379&gt; keys *
+1) &quot;name&quot;
+redis 127.0.0.1:6379&gt; set k1 v1
+OK
+redis 127.0.0.1:6379&gt; set k2 v2
+OK
+redis 127.0.0.1:6379&gt; set k3 v3
+OK
+redis 127.0.0.1:6379&gt; keys k?
+1) &quot;k1&quot;
+2) &quot;k2&quot;
+3) &quot;k3&quot;
+redis 127.0.0.1:6379&gt; DBSIZE
+(integer) 4
+redis 127.0.0.1:6379&gt; keys *
+1) &quot;k1&quot;
+2) &quot;k2&quot;
+3) &quot;name&quot;
+4) &quot;k3&quot;</code></pre><p>FLUSHDB清空当前库 FLUSHALL 清空16个库</p>
+<pre><code>redis 127.0.0.1:6379&gt; SELECT 7
+OK
+redis 127.0.0.1:6379[7]&gt; set v1 v17
+OK
+redis 127.0.0.1:6379[7]&gt; keys *
+1) &quot;v1&quot;
+redis 127.0.0.1:6379[7]&gt; FLUSHDB
+OK
+redis 127.0.0.1:6379[7]&gt; keys *
+(empty list or set)
+redis 127.0.0.1:6379[7]&gt; SELECT 0
+OK
+redis 127.0.0.1:6379&gt; keys *
+1) &quot;k1&quot;
+2) &quot;k2&quot;
+3) &quot;name&quot;
+4) &quot;k3&quot;
+redis 127.0.0.1:6379&gt; SELECT 1
+OK
+redis 127.0.0.1:6379[1]&gt; set k1 v11
+OK
+redis 127.0.0.1:6379[1]&gt; keys *
+1) &quot;k1&quot;
+redis 127.0.0.1:6379[1]&gt; FLUSHALL
+OK
+redis 127.0.0.1:6379[1]&gt; keys *
+(empty list or set)
+redis 127.0.0.1:6379[1]&gt; SELECT 0
+OK
+redis 127.0.0.1:6379&gt; keys *
+(empty list or set)
+redis 127.0.0.1:6379&gt;</code></pre><blockquote>
+<p>备注:</p>
+</blockquote>
+<ol>
+<li>统一密码管理:16个库都是一样的密码，要么连接16个都可以连接成功，要么一个都连不上</li>
+<li>Redis索引都是从0开始</li>
+</ol>
 
             </div>
             <hr/>
@@ -531,7 +743,7 @@ ENTRYPOINT ["java", "-jar", "app.jar"]</code></pre>
                     </span>
                     <a href="https://iscodeme.gitee.io" class="b-link-green">原来是小张</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/08/04/docker-bu-shu-springboot/" class="b-link-green">Docker部署SpringBoot</a>
+                    <a href="/2020/08/04/redis-ru-men-zhi-shi/" class="b-link-green">Redis入门知识</a>
                 </p>
             </div>
         </div>
@@ -552,29 +764,31 @@ ENTRYPOINT ["java", "-jar", "app.jar"]</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/04/docker-bu-shu-springboot/">
+                <a href="/2020/08/04/c-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Docker部署SpringBoot">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C#基础">
                         
-                        <span class="card-title">Docker部署SpringBoot</span>
+                        <span class="card-title">C#基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Docker部署SpringBootDocker配置# Centos7开启方式
-vim /lib/systemd/system/docker.service
-# 找到 ExecStart并修改
-ExecStart=/usr/bin/dock</div>
+                    <div class="summary">C#基础第一个C#程序using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+       </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -583,12 +797,11 @@ ExecStart=/usr/bin/dock</div>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Docker/" target="_blank">
-                        <span class="chip bg-color">Docker</span>
+                    <a href="/tags/C/" target="_blank">
+                        <span class="chip bg-color">C#</span>
                     </a>
                     
                 </div>
@@ -709,7 +922,7 @@ MySQL的运行机制
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">11.1k</span>
+                <span class="white-color">15.2k</span>
             
 
             

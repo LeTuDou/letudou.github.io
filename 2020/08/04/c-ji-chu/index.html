@@ -1,0 +1,1104 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="C#基础, JAVA,JavaBlog,Java">
+    <meta name="description" content="C#基础第一个C#程序using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+       ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>C#基础 | 原来是小张</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">原来是小张</span>
+                    </a>
+                </div>
+                
+
+<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search" title="搜索"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">原来是小张</div>
+        <div class="logo-desc">
+            
+            记录工作,学习,生活
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link">
+    <a href="https://github.com/letudou" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+    <a href="mailto:letudou@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2726804696" class="tooltipped" data-tooltip="QQ联系我: 2726804696" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        C#基础
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C/" target="_blank">
+                                <span class="chip bg-color">C#</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-08-04
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        1.9k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        7 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="C-基础"><a href="#C-基础" class="headerlink" title="C#基础"></a>C#基础</h3><h4 id="第一个C-程序"><a href="#第一个C-程序" class="headerlink" title="第一个C#程序"></a>第一个C#程序</h4><pre class=" language-c#"><code class="language-c#">using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //输出不换行
+            Console.Write("123");
+            Console.Write("456");
+            //输出并换行
+            Console.WriteLine("Hello World");
+            //读取键盘输入的所有字符，返回字符串。按下回车键退出
+            Console.ReadLine();
+            // 读取键盘输入的第一个字符，返回其对应的ASCII值。按下回车键退出
+            Console.Read();
+            //等待用户按下任意键并执行退出
+            //(此函数的作用是为了在控制台窗口停留一下，直到用户敲击键盘为止。不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过)
+            Console.ReadKey();
+        }
+    }
+}</code></pre>
+<h4 id="C-基本语法"><a href="#C-基本语法" class="headerlink" title="C# 基本语法"></a>C# 基本语法</h4><h5 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h5><p>标识符是用来识别类、变量、函数或任何其它用户定义的项目</p>
+<p>在 C# 中，类的命名必须遵循如下基本规则：</p>
+<ul>
+<li>标识符必须以字母、下划线或<code>@</code>开头，后面可以跟一系列的字母、数字（ 0 - 9 ）、下划线（ _ ）、@。</li>
+<li>标识符中的第一个字符不能是数字。</li>
+<li>标识符必须不包含任何嵌入的空格或符号，比如 ? - +! # % ^ &amp; * ( ) [ ] { } . ; : “ ‘ / \。</li>
+<li>标识符不能是 C# 关键字。除非它们有一个 @ 前缀。 例如，@if 是有效的标识符，但 if 不是，因为 if 是关键字。</li>
+<li>标识符必须区分大小写。大写字母和小写字母被认为是不同的字母。</li>
+<li>不能与C#的类库名称相同。</li>
+</ul>
+<h5 id="C-关键字"><a href="#C-关键字" class="headerlink" title="C#关键字"></a>C#关键字</h5><p>关键字是 C# 编译器预定义的保留字。这些关键字不能用作标识符，但是，如果您想使用这些关键字作为标识符，可以在关键字前面加上<code>@</code>字符作为前缀。</p>
+<p><img src="/2020/08/04/c-ji-chu/image-20200105123547240.png" alt="C#关键字列表"></p>
+<h4 id="C-数据类型"><a href="#C-数据类型" class="headerlink" title="C#数据类型"></a>C#数据类型</h4><h5 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h5><p>值类型的变量可以直接分配一个值。比如 <code>int</code>、<code>char</code>、<code>float</code>，它们分别存储数字、字符、浮点数。当您声明一个 <code>int</code>类型时，系统分配内存来存储值</p>
+<p><img src="/2020/08/04/c-ji-chu/image-20200105124121457.png" alt="image-20200105124121457"></p>
+<p>如需得到一个类型或一个变量在特定平台上的准确尺寸，可以使用 <code>sizeof</code> 方法。表达式 <code>sizeof(type)</code> 产生以字节为单位存储对象或类型的存储尺寸。</p>
+<pre class=" language-c#"><code class="language-c#">using System;
+namespace DataTypeApplication
+{
+   class Program
+   {
+      static void Main(string[] args)
+      {
+         Console.WriteLine("Size of int: {0}", sizeof(int));
+         Console.ReadLine();
+      }
+   }
+}
+
+结果：Size of int: 4</code></pre>
+<h5 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h5><p>引用类型不包含存储在变量中的实际数据，但它们包含对变量的引用。换句话说，它们指的是一个内存位置。使用多个变量时，引用类型可以指向一个内存位置。如果内存位置的数据是由一个变量改变的，其他变量会自动反映这种值的变化。<strong>内置的</strong> 引用类型有：<strong>object</strong>、<strong>dynamic</strong> 和 <strong>string</strong>。</p>
+<h6 id="对象类型"><a href="#对象类型" class="headerlink" title="对象类型"></a>对象类型</h6><p><strong>Object</strong> 是 <code>System.Object</code> 类的别名。所以对象（Object）类型可以被分配任何其他类型（值类型、引用类型、预定义类型或用户自定义类型）的值。但是，在分配值之前，需要先进行类型转换。</p>
+<p>当一个值类型转换为对象类型时，则被称为 <strong>装箱</strong>；另一方面，当一个对象类型转换为值类型时，则被称为 <strong>拆箱</strong>。</p>
+<pre class=" language-c#"><code class="language-c#">object obj;
+obj = 100; // 这是装箱
+int a = (int)obj;// 这是拆箱
+Console.WriteLine(a);
+结果：100</code></pre>
+<h6 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h6><p><strong>字符串（String）类型</strong> 允许您给变量分配任何字符串值。字符串（String）类型是 <code>System.String</code> 类的别名。它是从对象（Object）类型派生的。字符串（String）类型的值可以通过两种形式进行分配：引号和 <code>@</code>引号。</p>
+<pre><code>String str = &quot;letudou.github.io&quot;;
+//C# string 字符串的前面可以加 @（称作&quot;逐字字符串&quot;）将转义字符（\）当作普通字符对待
+String dataStr=@&quot;http://letudou.github.io&quot;;
+dataStr=@&quot;c:\user\letudou\&quot;; 等价于dataStr=&quot;c:\\user\\letudou\\&quot;; 
+
+</code></pre><p><code>@</code> 字符串中可以任意换行，换行符及缩进空格都计算在字符串长度之内。</p>
+<pre class=" language-C#"><code class="language-C#">string str = @"<script type=""text/javascript"">
+    <!--
+    -->
+</script>";
+Console.WriteLine(str);
+Console.ReadLine();</code></pre>
+<p><img src="/2020/08/04/c-ji-chu/image-20200105125532002.png" alt="控制台输出结果"></p>
+<h6 id="动态类型"><a href="#动态类型" class="headerlink" title="动态类型"></a>动态类型</h6><p>您可以存储任何类型的值在动态数据类型变量中。这些变量的类型检查是在运行时发生的。</p>
+<p>声明动态类型的语法：</p>
+<pre class=" language-c#"><code class="language-c#">dynamic <variable_name> = value;
+//举例
+dynamic d = 20;</code></pre>
+<p>动态类型与对象类型相似，但是对象类型变量的类型检查是在编译时发生的，而动态类型变量的类型检查是在运行时发生的。</p>
+<p>用户自定义引用类型有：<strong>class</strong>、<strong>interface</strong> 或 <strong>delegate</strong></p>
+<h5 id="指针类型"><a href="#指针类型" class="headerlink" title="指针类型"></a>指针类型</h5><p>指针类型变量存储另一种类型的内存地址。C# 中的指针与 C 或 C++ 中的指针有相同的功能。</p>
+<p>声明指针类型的语法：</p>
+<pre class=" language-C#"><code class="language-C#">type* identifier;</code></pre>
+<p>举例</p>
+<pre class=" language-c#"><code class="language-c#">char* cptr;
+int* iptr;</code></pre>
+<h4 id="C-类型转换"><a href="#C-类型转换" class="headerlink" title="C#类型转换"></a>C#类型转换</h4><p>类型转换从根本上说是类型铸造，或者说是把数据从一种类型转换为另一种类型。在 C# 中，类型铸造有两种形式：</p>
+<ol>
+<li><strong>隐式类型转换</strong> - 这些转换是 C# 默认的以安全方式进行的转换, 不会导致数据丢失。例如，从小的整数类型转换为大的整数类型，从派生类转换为基类。</li>
+<li><strong>显式类型转换</strong> - 显式类型转换，即强制类型转换。显式转换需要强制转换运算符，而且强制转换会造成数据丢失。</li>
+</ol>
+<h5 id="显式类型转换举例"><a href="#显式类型转换举例" class="headerlink" title="显式类型转换举例"></a>显式类型转换举例</h5><pre class=" language-C#"><code class="language-C#">double d = 5673.74;
+int i;
+// 强制转换 double 为 int
+i = (int)d;
+Console.WriteLine(i);
+Console.ReadKey();
+结果:5673</code></pre>
+<h5 id="C-类型转换方法"><a href="#C-类型转换方法" class="headerlink" title="C#类型转换方法"></a>C#类型转换方法</h5><p>C# 提供了下列内置的类型转换方法：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>ToBoolean</strong></td>
+<td align="center">如果可能的话，把类型转换为布尔型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToByte</strong></td>
+<td align="center">把类型转换为字节类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToChar</strong></td>
+<td align="center">如果可能的话，把类型转换为单个 Unicode 字符类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToDateTime</strong></td>
+<td align="center">把类型（整数或字符串类型）转换为 日期-时间 结构。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToDecimal</strong></td>
+<td align="center">把浮点型或整数类型转换为十进制类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToDouble</strong></td>
+<td align="center">把类型转换为双精度浮点型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToInt16</strong></td>
+<td align="center">把类型转换为 16 位整数类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToInt32</strong></td>
+<td align="center">把类型转换为 32位整数类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToInt64</strong></td>
+<td align="center">把类型转换为 64 位整数类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToUInt16</strong></td>
+<td align="center">把类型转换为 16 位无符号整数类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToUInt32</strong></td>
+<td align="center">把类型转换为 32 位无符号整数类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToUInt64</strong></td>
+<td align="center">把类型转换为 64 位无符号整数类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToSbyte</strong></td>
+<td align="center">把类型转换为有符号字节类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToSingle</strong></td>
+<td align="center">把类型转换为小浮点数类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>ToString</strong></td>
+<td align="center">把类型转换为字符串类型。</td>
+</tr>
+</tbody></table>
+<p>举例:</p>
+<pre class=" language-C#"><code class="language-C#">static void Main(string[] args)
+{
+    int i = 75;
+    float f = 53.005f;
+    double d = 2345.7652;
+    bool b = true;
+    Console.WriteLine(i.ToString());
+    Console.WriteLine(f.ToString());
+    Console.WriteLine(d.ToString());
+    Console.WriteLine(b.ToString());
+    Console.WriteLine(i.GetType());
+    Console.ReadKey();
+}</code></pre>
+<p>结果：</p>
+<pre class=" language-c#"><code class="language-c#">75
+53.005
+2345.7652
+True
+System.Int32</code></pre>
+<h2 id="List泛型集合"><a href="#List泛型集合" class="headerlink" title="List泛型集合"></a>List泛型集合</h2><pre class=" language-c#"><code class="language-c#">using System;
+using System.Collections.Generic;
+using System.Linq;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> list = new List<int>();
+            //添加单个
+            list.Add(1);
+            list.Add(2);
+            //添加多个
+            list.AddRange(new int[] { 3,4,5,6});
+            list.AddRange(list);
+            list.Insert(0,3);
+            //list 泛型集合可以转换为数组
+            int[] listArray = list.ToArray();
+            List<int> list2 = new List<int>();
+            //listArray数组 可以转换为泛型集合
+            list2 = listArray.ToList();
+            foreach (int listOne in list) {
+                Console.WriteLine(listOne);
+            }
+            Console.ReadLine();
+        }
+    }
+}</code></pre>
+<h2 id="装箱、拆箱"><a href="#装箱、拆箱" class="headerlink" title="装箱、拆箱"></a>装箱、拆箱</h2><ul>
+<li>装箱：就是将值类型转换为引用类型。</li>
+<li>拆箱：就是将引用类型转换为值类型。</li>
+<li>如何判断是否装箱或者拆箱？这两种类型是否存在继承关系<ul>
+<li>存在的话则有可能发生。</li>
+<li>不存在一定不会发生。</li>
+</ul>
+</li>
+</ul>
+<pre class=" language-c#"><code class="language-c#">using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //int n = 100;
+            ////装箱
+            //object o = n;
+            ////拆箱
+            //int nn = (int)o;
+
+            //ArrayList list = new ArrayList();
+            //00:00:00.0576652
+            List<int> list = new List<int>();
+            //00:00:00.0090775
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            for (int i=0;i<999999; i++) {
+                list.Add(i);
+            }
+            sw.Stop();
+            Console.WriteLine(sw.Elapsed);
+            //未发生
+            string str = "123123";
+            int num = Convert.ToInt32(str);
+            //装箱
+            int n = 101;
+            IComparable c = n;
+            Console.ReadLine();
+        }
+    }
+}</code></pre>
+<h2 id="Dictionary的使用"><a href="#Dictionary的使用" class="headerlink" title="Dictionary的使用"></a>Dictionary的使用</h2><pre class=" language-c#"><code class="language-c#">using System;
+using System.Collections.Generic;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<int, string> dic = new Dictionary<int, string> ();
+            dic.Add(1,"乐土豆");
+            dic.Add(2, "李四");
+            dic.Add(3, "王五");
+            dic[1] = "新来的";
+
+            //foreach (var item in dic.Keys)
+            //{
+            //    Console.WriteLine("{0}---{1}",item,dic[item]);
+            //}
+            foreach (KeyValuePair<int, string> kv in dic)
+            {
+                Console.WriteLine("{0}---{1}", kv.Key, kv.Value);
+            }
+            Console.ReadLine();
+        }
+    }
+}</code></pre>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff;
+        background-color: #22AB38;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff;
+        background-color: #019FE8;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs">
+                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
+                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                    <div id="wechat">
+                        <img src="/medias/reward/wx.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                    <div id="alipay">
+                        <img src="/medias/reward/zfb.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#reward .reward-link').on('click', function () {
+            $('#rewardModal').openModal();
+        });
+
+        $('#rewardModal .close').on('click', function () {
+            $('#rewardModal').closeModal();
+        });
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://iscodeme.gitee.io" class="b-link-green">原来是小张</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2020/08/04/c-ji-chu/" class="b-link-green">C#基础</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/08/04/c-ji-chu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C#基础">
+                        
+                        <span class="card-title">C#基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">C#基础第一个C#程序using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+       </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            小张
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/" target="_blank">
+                        <span class="chip bg-color">C#</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/08/04/redis-ru-men-zhi-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Redis入门知识">
+                        
+                        <span class="card-title">Redis入门知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">Redis入门知识
+
+Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-value数据库。
+
+内存存储和持久化&nbsp;&nbsp;Redis 数据库中的所有数据都存储在内存中，由于内存读写速度远远超过硬盘的读写速度,相</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            小张
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Redis/" target="_blank">
+                        <span class="chip bg-color">Redis</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 原来是小张<br />'
+            + '作者: 小张:)<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+         基于<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">15.2k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/letudou" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+    <a href="mailto:letudou@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2726804696" class="tooltipped" data-tooltip="QQ联系我: 2726804696" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/js/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

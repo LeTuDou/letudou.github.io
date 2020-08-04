@@ -240,80 +240,10 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
-    }
-</style>
-<div class="row">
-    <div class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -640,39 +570,28 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/03/shu-ju-ku-ji-chu-zhi-shi/">
+                <a href="/2020/02/28/docker-bu-shu-springboot/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="数据库基础知识">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Docker部署SpringBoot">
                         
-                        <span class="card-title">数据库基础知识</span>
+                        <span class="card-title">Docker部署SpringBoot</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">数据库基础知识三大范式
-第一范式的目标是确保每列的原子性，每列都是不可再分的最小数据单元。
-第二范式要求每个表只描述一件事情
-第三范式要求表中的各列必须和主键直接相关，不能间接相关
-
-MySQL的运行机制
-基础SQL语句==使用数据前必须先</div>
+                    <div class="summary">Docker部署SpringBootDocker配置# Centos7开启方式
+vim /lib/systemd/system/docker.service
+# 找到 ExecStart并修改
+ExecStart=/usr/bin/dock</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-03
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-28
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/数据库/" class="post-category" target="_blank">
-                                    数据库
-                                </a>
-                            
-                            <a href="/categories/数据库/MySql/" class="post-category" target="_blank">
-                                    MySql
-                                </a>
-                            
+                            <i class="fa fa-user fa-fw"></i>
+                            小张
                             
                         </span>
                     </div>
@@ -680,12 +599,8 @@ MySQL的运行机制
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/数据库/" target="_blank">
-                        <span class="chip bg-color">数据库</span>
-                    </a>
-                    
-                    <a href="/tags/MySql/" target="_blank">
-                        <span class="chip bg-color">MySql</span>
+                    <a href="/tags/Docker/" target="_blank">
+                        <span class="chip bg-color">Docker</span>
                     </a>
                     
                 </div>
@@ -724,7 +639,7 @@ MySQL的运行机制
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
-                            LeTuDou
+                            小张
                             
                         </span>
                     </div>
@@ -783,53 +698,6 @@ MySQL的运行机制
     });
 </script>
 
-    </div>
-    <div class="col l3 hide-on-med-and-down">
-        <div class="toc-widget">
-            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            // headingsOffset: -205,
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-    });
-</script>
     
 
 </main>
@@ -842,7 +710,7 @@ MySQL的运行机制
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">11.1k</span>
+                <span class="white-color">15.2k</span>
             
 
             
