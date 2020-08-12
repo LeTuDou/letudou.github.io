@@ -4,12 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Redis入门知识, JAVA,JavaBlog,Java">
-    <meta name="description" content="Redis入门知识
-
-Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-value数据库。
-
-内存存储和持久化&amp;nbsp;&amp;nbsp;Redis 数据库中的所有数据都存储在内存中，由于内存读写速度远远超过硬盘的读写速度,相">
+    <meta name="keywords" content="JAVA,JavaBlog,Java">
+    <meta name="description" content="第一个Vue程序下载地址
+&amp;lt;!-- 开发环境版本，包含了有帮助的命令行警告 --&gt;
+&amp;lt;script src=&#34;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&#34;&gt;&amp;lt;/script&gt;
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@ Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-valu
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Redis入门知识 | 原来是小张</title>
+    <title>原来是小张</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -226,13 +225,13 @@ Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-valu
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Redis入门知识
+                        
                     </div>
                 </div>
             </div>
@@ -242,23 +241,89 @@ Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-valu
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Redis/" target="_blank">
-                                <span class="chip bg-color">Redis</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -269,21 +334,21 @@ Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-valu
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-04
+                    2020-08-12
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.2k
+                        191
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        11 分
+                        1 分
                     </div>
                     
                 
@@ -299,310 +364,33 @@ Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-valu
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Redis入门知识"><a href="#Redis入门知识" class="headerlink" title="Redis入门知识"></a>Redis入门知识</h2><hr>
-<blockquote>
-<p>Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-value数据库。</p>
-</blockquote>
-<h3 id="内存存储和持久化"><a href="#内存存储和持久化" class="headerlink" title="内存存储和持久化"></a>内存存储和持久化</h3><p>&nbsp;&nbsp;Redis 数据库中的所有数据都存储在内存中，由于内存读写速度远远超过硬盘的读写速度,相比较其他基于硬盘存储的数据数据库有很明显的优势。<br>&nbsp;&nbsp;将数据全部存在内存中比较不稳妥，如果由于不可抗力因素主机断电数据会丢失。Redis提供了对持久化的支持，也就是将内存中的数据异步备份写入到硬盘，并提供两种方式，分别是RDB （Redis DataBase）和 AOF （Append Only File）;</p>
-<h3 id="Redis的安装"><a href="#Redis的安装" class="headerlink" title="Redis的安装"></a>Redis的安装</h3><ol>
-<li>在Linux中的安装<pre><code>wget http://download.redis.io/releases/redis-5.0.5.tar.gz
-tar xvf redis-5.0.5.tar.gz
-cd redis-5.0.5
-make</code></pre>make完后 redis-5.0.5目录下会出现编译后的redis服务程序redis-server,还有用于测试的客户端程序redis-cli</li>
-<li>在Windows中的安装<br>下载地址：<a href="https://github.com/dmajkic/redis/downloads" target="_blank" rel="noopener">https://github.com/dmajkic/redis/downloads</a> 根据自己情况下载对应版本，支持32位和64位<br>解压到某一目录。</li>
-</ol>
-<h3 id="文件介绍-以Windows为例"><a href="#文件介绍-以Windows为例" class="headerlink" title="文件介绍(以Windows为例)"></a>文件介绍(以Windows为例)</h3><table>
-<thead>
-<tr>
-<th align="left">文件名</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">redis-server</td>
-<td align="center">Redis服务端程序</td>
-</tr>
-<tr>
-<td align="left">redis-cli</td>
-<td align="center">Redis命令行客户端</td>
-</tr>
-<tr>
-<td align="left">redis-benchmark</td>
-<td align="center">Redis性能测试工具</td>
-</tr>
-<tr>
-<td align="left">redis-check-aof</td>
-<td align="center">AOF文件修复工具</td>
-</tr>
-<tr>
-<td align="left">redis-check-dump</td>
-<td align="center">RDB文件修复工具</td>
-</tr>
-</tbody></table>
-<h3 id="Redis启动与停止"><a href="#Redis启动与停止" class="headerlink" title="Redis启动与停止"></a>Redis启动与停止</h3><p>&nbsp;&nbsp;&nbsp;Redis启动方式:直接运行redis-server即可启动Redis;Redis默认使用6379端口，找到配置文件第25行:<code>port 6379</code>可自定义修改<br>&nbsp;&nbsp;&nbsp;Redis停止方式:</p>
-<ol>
-<li>命令行结束redis-server进程</li>
-<li>redis-cli SHUTDOWN</li>
-</ol>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一种方式会导致数据丢失,不推荐使用<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二种方式当Redis收到 <code>SHUTDOWN</code>命令后,会先断开所有客户端连接,然后根据配置执行持久化,最后完成退出。Redis可以稳妥处理<code>SIGTERM</code>信号,所以使用<code>kill</code>Redis进程的<code>PID</code> 也可以正常结束Redis,效果与发送<code>SHUTDOWN</code>命令一样。</p>
-<h3 id="Redis数据类型"><a href="#Redis数据类型" class="headerlink" title="Redis数据类型"></a>Redis数据类型</h3><ol>
-<li><p>Redis的五大数据类型</p>
-<ul>
-<li>String (字符串)<ul>
-<li>一个key对应一个value</li>
-<li>二进制安全 redis的String可以包含任何数据，比如二进制jpg图片或者序列化的对象</li>
-<li>一个Redis中字符串value最多是512MB</li>
-</ul>
-</li>
-<li>Hash  (哈希,类似Java的Map)<ul>
-<li>是一个键值对集合</li>
-<li>是一个String类型的fieId 和value的映射表, Hash特别适合用于存储对象</li>
-</ul>
-</li>
-<li>List  (列表)<ul>
-<li>简单的字符串列表，按照插入顺序排序,添加一个元素到列表的头部(左边)或者尾部(右边)</li>
-<li>底层是一个链表</li>
-</ul>
-</li>
-<li>Set   (集合)<ul>
-<li>是String类型的无序集合</li>
-<li>通过HashTable实现的</li>
-</ul>
-</li>
-<li>Zset  (sorted set:有序集合)<ul>
-<li>Zset和Set同样都是String类型元素的集合,且不允许出现重复的成员</li>
-<li>不同的是Zset每个元素都会关联一个double类型的分数</li>
-<li>Zset的成员唯一,但分数却可以重复,通过分数排序</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Redis键(key)举例</p>
-<ul>
-<li><p>EXISTS key的名字,判断某个key是否存在</p>
-<pre><code>redis 127.0.0.1:6379&gt; EXISTS k1
-(integer) 1
-redis 127.0.0.1:6379&gt; EXISTS k
-(integer) 0
-redis 127.0.0.1:6379&gt;</code></pre></li>
-<li><p>move key db 当前库中没有，移动到指定的库中</p>
-<pre><code>redis 127.0.0.1:6379&gt; move k3 7
-(integer) 1
-redis 127.0.0.1:6379&gt; keys *
-1) &quot;k4&quot;
-2) &quot;k1&quot;
-3) &quot;k2&quot;
-redis 127.0.0.1:6379&gt; SELECT 7
-OK
-redis 127.0.0.1:6379[7]&gt; keys *
-1) &quot;k3&quot;
-redis 127.0.0.1:6379&gt;</code></pre></li>
-<li><p>expire key 秒: 给指定的key设置过期时间;ttl key:以秒为单位返回 key 的剩余过期时间(在 Redis 2.8 以前，当 key 不存在，或者 key 没有设置剩余生存时间时，命令都返回 -1 )</p>
-<pre><code>redis 127.0.0.1:6379[7]&gt; SELECT 0
-OK
-redis 127.0.0.1:6379&gt; keys *
-1) &quot;k4&quot;
-2) &quot;k1&quot;
-3) &quot;k2&quot;
-redis 127.0.0.1:6379&gt; expire k2 10
-(integer) 1
-redis 127.0.0.1:6379&gt; ttl k2
-(integer) 7
-redis 127.0.0.1:6379&gt; ttl k2
-(integer) 5
-redis 127.0.0.1:6379&gt; ttl k2
-(integer) 4
-redis 127.0.0.1:6379&gt; ttl k2
-(integer) -1
-redis 127.0.0.1:6379&gt; keys *
-1) &quot;k4&quot;
-2) &quot;k1&quot;
-redis 127.0.0.1:6379&gt; ttl k1
-(integer) -1
-redis 127.0.0.1:6379&gt; ttl k2
-(integer) -1
-redis 127.0.0.1:6379&gt;</code></pre></li>
-<li><p>type key:查看当前key的类型</p>
-<pre><code>redis 127.0.0.1:6379&gt; set k1 types
-OK
-redis 127.0.0.1:6379&gt; type k1
-string
-redis 127.0.0.1:6379&gt;  lpush myList 1 2 3 4 5
-(integer) 5
-redis 127.0.0.1:6379&gt; type myList
-list
-redis 127.0.0.1:6379&gt; LRANGE myList 0 -1
-1) &quot;5&quot;
-2) &quot;4&quot;
-3) &quot;3&quot;
-4) &quot;2&quot;
-5) &quot;1&quot;
-redis 127.0.0.1:6379&gt;
-</code></pre></li>
-</ul>
-</li>
-<li><p>Redis字符串(String)举例</p>
-<ul>
-<li><p>set/get/del/append/strlen</p>
-<pre><code>redis 127.0.0.1:6379&gt; set k1 v1
-OK
-redis 127.0.0.1:6379&gt; get k1
-&quot;v1&quot;
-redis 127.0.0.1:6379&gt; append k1 v1
-(integer) 4
-redis 127.0.0.1:6379&gt; get k1
-&quot;v1v1&quot;
-redis 127.0.0.1:6379&gt; strlen k1
-(integer) 4
-redis 127.0.0.1:6379&gt; keys *
-1) &quot;k1&quot;
-redis 127.0.0.1:6379&gt; del k1
-(integer) 1
-redis 127.0.0.1:6379&gt; keys *
-(empty list or set)
-redis 127.0.0.1:6379&gt;</code></pre></li>
-<li><p>incrby/decrby 一定是数字才可以进行加减</p>
-<pre><code>redis 127.0.0.1:6379&gt; set k2 0
-OK
-redis 127.0.0.1:6379&gt; INCRBY k2 1
-(integer) 1
-redis 127.0.0.1:6379&gt; INCRBY k2 1
-(integer) 2
-redis 127.0.0.1:6379&gt; INCRBY k2 1
-(integer) 3
-redis 127.0.0.1:6379&gt; decrBy k2 1
-(integer) 2
-redis 127.0.0.1:6379&gt; decrBy k2 1
-(integer) 1
-redis 127.0.0.1:6379&gt; get k2
-&quot;1&quot;
-redis 127.0.0.1:6379&gt;</code></pre></li>
-<li><p>getrange/setrange</p>
-<pre><code>redis 127.0.0.1:6379&gt; set k1 aaabbbccc
-OK
-redis 127.0.0.1:6379&gt; getrange k1 0 -1
-&quot;aaabbbccc&quot;
-redis 127.0.0.1:6379&gt; getrange k1 0 3
-&quot;aaab&quot;
-redis 127.0.0.1:6379&gt; setrange k1 3 ddd
-(integer) 9
-redis 127.0.0.1:6379&gt; getrange k1 0 -1
-&quot;aaadddccc&quot;
-redis 127.0.0.1:6379&gt;</code></pre></li>
-<li><p>setex(set with expire)键秒值/setnx(set if not exist)</p>
-<pre><code>redis 127.0.0.1:6379&gt; setex k3 10 v3
-OK
-redis 127.0.0.1:6379&gt; ttl k3
-(integer) 7
-redis 127.0.0.1:6379&gt; ttl k3
-(integer) 6
-redis 127.0.0.1:6379&gt; ttl k3
-(integer) 5
-redis 127.0.0.1:6379&gt; ttl k3
-(integer) 5
-redis 127.0.0.1:6379&gt; ttl k3
-(integer) 4
-redis 127.0.0.1:6379&gt; get k3
-(nil)
-redis 127.0.0.1:6379&gt; get k1
-&quot;aaadddccc&quot;
-redis 127.0.0.1:6379&gt; setnx k1 aaaaaaaa
-(integer) 0
-redis 127.0.0.1:6379&gt; get k1
-&quot;aaadddccc&quot;
-redis 127.0.0.1:6379&gt;</code></pre></li>
-<li><p>mset/mget/msetnx</p>
-<pre><code>redis 127.0.0.1:6379&gt; mset k1 v1 k2 v2 k3 v3 k4 v4
-OK
-redis 127.0.0.1:6379&gt; mget k1 k2 k3 k4
-1) &quot;v1&quot;
-2) &quot;v2&quot;
-3) &quot;v3&quot;
-4) &quot;v4&quot;
-redis 127.0.0.1:6379&gt;</code></pre></li>
-</ul>
-</li>
-</ol>
-<h3 id="Redis命令行客户端使用"><a href="#Redis命令行客户端使用" class="headerlink" title="Redis命令行客户端使用"></a>Redis命令行客户端使用</h3><ol>
-<li>启动服务端<br><code>redis-server</code></li>
-<li>连接客户端<br><code>redis-cli -h 127.0.0.1 -p 6379</code></li>
-<li>连通性测试<pre><code>redis 127.0.0.1:6379&gt; ping
-PONG
-redis 127.0.0.1:6379&gt; echo hello
-&quot;hello&quot;
-redis 127.0.0.1:6379&gt;</code></pre></li>
-<li>举例读取操作<pre><code>redis 127.0.0.1:6379&gt; SET name &quot;LeTuDou&quot;
-OK
-redis 127.0.0.1:6379&gt; get name
-&quot;LeTuDou&quot;
-redis 127.0.0.1:6379&gt;</code></pre></li>
-<li>演示操作<br>Redis默认16个数据库 可以通过select num切换数据库 其中num大于等于0小于等于16减1一下举例切换到第8个数据库</li>
-</ol>
-<pre><code>redis 127.0.0.1:6379&gt; select 7
-OK
-redis 127.0.0.1:6379[7]&gt; select 0
-OK
-redis 127.0.0.1:6379&gt;
-</code></pre><p>DBSIZE命令查看当前数据库中key的数量;keys * 查看当前数据库中key</p>
-<pre><code>redis 127.0.0.1:6379&gt; DBSIZE
-(integer) 1
-redis 127.0.0.1:6379&gt; keys *
-1) &quot;name&quot;
-redis 127.0.0.1:6379&gt; set k1 v1
-OK
-redis 127.0.0.1:6379&gt; set k2 v2
-OK
-redis 127.0.0.1:6379&gt; set k3 v3
-OK
-redis 127.0.0.1:6379&gt; keys k?
-1) &quot;k1&quot;
-2) &quot;k2&quot;
-3) &quot;k3&quot;
-redis 127.0.0.1:6379&gt; DBSIZE
-(integer) 4
-redis 127.0.0.1:6379&gt; keys *
-1) &quot;k1&quot;
-2) &quot;k2&quot;
-3) &quot;name&quot;
-4) &quot;k3&quot;</code></pre><p>FLUSHDB清空当前库 FLUSHALL 清空16个库</p>
-<pre><code>redis 127.0.0.1:6379&gt; SELECT 7
-OK
-redis 127.0.0.1:6379[7]&gt; set v1 v17
-OK
-redis 127.0.0.1:6379[7]&gt; keys *
-1) &quot;v1&quot;
-redis 127.0.0.1:6379[7]&gt; FLUSHDB
-OK
-redis 127.0.0.1:6379[7]&gt; keys *
-(empty list or set)
-redis 127.0.0.1:6379[7]&gt; SELECT 0
-OK
-redis 127.0.0.1:6379&gt; keys *
-1) &quot;k1&quot;
-2) &quot;k2&quot;
-3) &quot;name&quot;
-4) &quot;k3&quot;
-redis 127.0.0.1:6379&gt; SELECT 1
-OK
-redis 127.0.0.1:6379[1]&gt; set k1 v11
-OK
-redis 127.0.0.1:6379[1]&gt; keys *
-1) &quot;k1&quot;
-redis 127.0.0.1:6379[1]&gt; FLUSHALL
-OK
-redis 127.0.0.1:6379[1]&gt; keys *
-(empty list or set)
-redis 127.0.0.1:6379[1]&gt; SELECT 0
-OK
-redis 127.0.0.1:6379&gt; keys *
-(empty list or set)
-redis 127.0.0.1:6379&gt;</code></pre><blockquote>
-<p>备注:</p>
-</blockquote>
-<ol>
-<li>统一密码管理:16个库都是一样的密码，要么连接16个都可以连接成功，要么一个都连不上</li>
-<li>Redis索引都是从0开始</li>
-</ol>
+                <h2 id="第一个Vue程序"><a href="#第一个Vue程序" class="headerlink" title="第一个Vue程序"></a>第一个Vue程序</h2><p>下载地址</p>
+<pre class=" language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 生产环境版本，优化了尺寸和速度 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>Vue.js 的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Vue学习<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Message: {{ msg }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        <span class="token keyword">var</span> app<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 挂载元素</span>
+            el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+            data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                msg<span class="token punctuation">:</span><span class="token string">"你好，小张!"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p><img src="/2020/08/12/vue-di-yi-ge-vue-cheng-xu/image-20200812232032100.png" alt></p>
 
             </div>
             <hr/>
@@ -743,7 +531,7 @@ redis 127.0.0.1:6379&gt;</code></pre><blockquote>
                     </span>
                     <a href="https://iscodeme.gitee.io" class="b-link-green">原来是小张</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/08/04/redis-ru-men-zhi-shi/" class="b-link-green">Redis入门知识</a>
+                    <a href="/2020/08/12/vue-di-yi-ge-vue-cheng-xu/" class="b-link-green"></a>
                 </p>
             </div>
         </div>
@@ -768,42 +556,33 @@ redis 127.0.0.1:6379&gt;</code></pre><blockquote>
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/04/c-ji-chu/">
+                <a href="/2020/08/12/vue-sheng-ming-zhou-qi-tu-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C#基础">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">C#基础</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">C#基础第一个C#程序using System;
-namespace ConsoleApp1
-{
-    class Program
-    {
-        static void Main(string[] args)
-       </div>
+                    <div class="summary">Vue 生命周期图示似乎觉得特别像Java里面的AOP环绕通知。
+网图中文
+
+原版英文
+
+</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-04
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-12
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
-                            小张
+                            小张:)
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/C/" target="_blank">
-                        <span class="chip bg-color">C#</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -815,54 +594,28 @@ namespace ConsoleApp1
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/03/shu-ju-ku-ji-chu-zhi-shi/">
+                <a href="/2020/08/09/mongodb-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="数据库基础知识">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">数据库基础知识</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">数据库基础知识三大范式
-第一范式的目标是确保每列的原子性，每列都是不可再分的最小数据单元。
-第二范式要求每个表只描述一件事情
-第三范式要求表中的各列必须和主键直接相关，不能间接相关
-
-MySQL的运行机制
-基础SQL语句==使用数据前必须先</div>
+                    <div class="summary">MongoDB入门安装MongoDB</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-03
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-09
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/数据库/" class="post-category" target="_blank">
-                                    数据库
-                                </a>
-                            
-                            <a href="/categories/数据库/MySql/" class="post-category" target="_blank">
-                                    MySql
-                                </a>
-                            
+                            <i class="fa fa-user fa-fw"></i>
+                            小张:)
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/数据库/" target="_blank">
-                        <span class="chip bg-color">数据库</span>
-                    </a>
-                    
-                    <a href="/tags/MySql/" target="_blank">
-                        <span class="chip bg-color">MySql</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -910,6 +663,53 @@ MySQL的运行机制
     });
 </script>
 
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
     
 
 </main>

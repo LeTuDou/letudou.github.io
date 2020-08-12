@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2020/08/12/vue-sheng-ming-zhou-qi-tu-shi/"/>
+      <url>/2020/08/12/vue-sheng-ming-zhou-qi-tu-shi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Vue-生命周期图示"><a href="#Vue-生命周期图示" class="headerlink" title="Vue 生命周期图示"></a>Vue 生命周期图示</h2><p>似乎觉得特别像Java里面的AOP环绕通知。</p><h3 id="网图中文"><a href="#网图中文" class="headerlink" title="网图中文"></a>网图中文</h3><img src="/2020/08/12/vue-sheng-ming-zhou-qi-tu-shi/Chinese.jpg" style="zoom:50%;"><h3 id="原版英文"><a href="#原版英文" class="headerlink" title="原版英文"></a>原版英文</h3><img src="/2020/08/12/vue-sheng-ming-zhou-qi-tu-shi/English.png" style="zoom:50%;">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2020/08/12/vue-di-yi-ge-vue-cheng-xu/"/>
+      <url>/2020/08/12/vue-di-yi-ge-vue-cheng-xu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="第一个Vue程序"><a href="#第一个Vue程序" class="headerlink" title="第一个Vue程序"></a>第一个Vue程序</h2><p>下载地址</p><pre class=" language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!-- 生产环境版本，优化了尺寸和速度 --></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre><p>Vue.js 的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统：</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Vue学习<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>    <span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Message: {{ msg }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">        <span class="token keyword">var</span> app<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>            <span class="token comment" spellcheck="true">// 挂载元素</span>            el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>            data<span class="token punctuation">:</span><span class="token punctuation">{</span>                msg<span class="token punctuation">:</span><span class="token string">"你好，小张!"</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span><span class="token punctuation">)</span>    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre><p><img src="/2020/08/12/vue-di-yi-ge-vue-cheng-xu/image-20200812232032100.png" alt></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2020/08/09/mongodb-ru-men/"/>
+      <url>/2020/08/09/mongodb-ru-men/</url>
+      
+        <content type="html"><![CDATA[<h2 id="MongoDB入门"><a href="#MongoDB入门" class="headerlink" title="MongoDB入门"></a>MongoDB入门</h2><h3 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h3>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C#基础</title>
       <link href="/2020/08/04/c-ji-chu/"/>
       <url>/2020/08/04/c-ji-chu/</url>
