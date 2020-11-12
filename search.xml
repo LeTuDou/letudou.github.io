@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Nginx + FastDfs安装</title>
+      <link href="/2020/08/12/nginx-fastdfs-an-zhuang/"/>
+      <url>/2020/08/12/nginx-fastdfs-an-zhuang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="程序版本"><a href="#程序版本" class="headerlink" title="程序版本"></a>程序版本</h2><p>Nginx  V1.16.1</p><p>libfastcomman V1.0.43</p><p>fastdfs V6.06</p><p>fastdfs-nginx-module V1.22</p><h2 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h2><pre class=" language-sh"><code class="language-sh">yum -y install gcc make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</code></pre><h2 id="FastDfs目录创建"><a href="#FastDfs目录创建" class="headerlink" title="FastDfs目录创建"></a>FastDfs目录创建</h2><pre class=" language-sh"><code class="language-sh">mkdir  -p /fastdfs/trackermkdir  -p /fastdfs/storagemkdir  -p /fastdfs/logsmkdir  -p /fastdfs/tmp</code></pre><h2 id="下载libfastcomman-源码安装（基础环境）"><a href="#下载libfastcomman-源码安装（基础环境）" class="headerlink" title="下载libfastcomman 源码安装（基础环境）"></a>下载libfastcomman 源码安装（基础环境）</h2><pre class=" language-sh"><code class="language-sh">#   github address:  https://github.com/happyfish100/libfastcommon.git#   gitee address:   https://gitee.com/fastdfs100/libfastcommon.git git clone https://github.com/happyfish100/libfastcommon.git cd libfastcommon ./make.sh clean && ./make.sh && ./make.sh install # 复制文件，解决FastDFS中lib配置文件路径问题。cp /usr/lib64/libfastcommon.so /usr/local/lib/libfastcommon.socp /usr/lib64/libfastcommon.so /usr/lib/libfastcommon.so</code></pre><h2 id="下载安装-FastDFS-源码安装"><a href="#下载安装-FastDFS-源码安装" class="headerlink" title="下载安装 FastDFS 源码安装"></a>下载安装 FastDFS 源码安装</h2><pre class=" language-sh"><code class="language-sh"># 安装完后 默认配置文件的目录为 /etc/fdfs/ 默认命令存放在 /usr/bin/ 并且以 fdfs_ 开头。#   github address:  https://github.com/happyfish100/fastdfs.git#   gitee address:   https://gitee.com/fastdfs100/fastdfs.gitgit clone https://github.com/happyfish100/fastdfs.gitcd fastdfs./make.sh clean./make.sh ./make.sh install./setup.sh /etc/fdfs</code></pre><h2 id="修改配置文件-并启动"><a href="#修改配置文件-并启动" class="headerlink" title="修改配置文件 并启动"></a>修改配置文件 并启动</h2><pre class=" language-sh"><code class="language-sh"># 配置 trackervim tracker.confbase_path =/fastdfs/tracker# 启动 trackerfdfs_trackerd /etc/fdfs/tracker.conf start# 配置 storagevim storage.conf# 日志目录base_path=/fastdfs/storage # 存储目录store_path0=/fastdfs/storage#tracker节点tracker_server=192.168.174.133:22122#启动storagefdfs_storaged /etc/fdfs/storage.conf start# 配置 clientvim client.conf#tracker节点tracker_server=192.168.174.133:22122#日志路径base_path=/fastdfs/logs</code></pre><p>注:</p><pre class=" language-sh"><code class="language-sh"># 若是 Linux 系统可以通过服务的方式操作。/sbin/service fdfs_trackerd restart/sbin/service fdfs_storaged restart#监控程序/usr/bin/fdfs_monitor /etc/fdfs/client.conf#运行测试程序 /usr/bin/fdfs_test <client_conf_filename> <operation>/usr/bin/fdfs_test /etc/fdfs/client.conf upload /etc/fdfs/client.conf.sample</code></pre><h2 id="Nginx-安装-与-配置fastdfs-nginx-module"><a href="#Nginx-安装-与-配置fastdfs-nginx-module" class="headerlink" title="Nginx 安装  与 配置fastdfs-nginx-module"></a>Nginx 安装  与 配置fastdfs-nginx-module</h2><pre class=" language-sh"><code class="language-sh"># Nginx源码下载wget http://nginx.org/download/nginx-1.16.1.tar.gztar -zxvf nginx-1.16.1.tar.gz# fastdfs-nginx-module 源码下载# github address: https://github.com/happyfish100/fastdfs-nginx-module# gitee address: https://gitee.com/fastdfs100/fastdfs-nginx-module.gitgit clone https://gitee.com/fastdfs100/fastdfs-nginx-module.git# 配置mod_fastdfs.conf文件cd /root/fastdfs/fastdfs-nginx-module/srccp mod_fastdfs.conf /etc/fdfs/vim /etc/fdfs/mod_fastdfs.conf# 客户端访问文件连接超时时长（单位：秒）connect_timeout=10# 存储日志路径base_path=/fastdfs/tmp# tracker服务IP和端口tracker_server=192.168.174.133:22122# 访问链接前缀加上组名url_have_group_name=truegroup_count = 1[group1]# 和storage的groupname一一对应group_name=group1storage_server_port=23000store_path_count=1# 文件存储路径store_path0=/fastdfs/storage# 编译安装 PCRE (PCRE 作用是让 Nginx 支持 Rewrite 功能)#wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz#tar -zxvf pcre-8.35.tar.gz#cd pcre-8.35#./configure#make && make install#pcre-config --version# 编译安装 nginxcd nginx-1.16.1#./configure  --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/root/pcre-8.35 --add-module=/root/fastdfs-nginx-module/src./configure  --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --add-module=/root/fastdfs-nginx-module/srcmakemake install# 配置nginxvim /usr/local/webserver/nginx/conf/nginx.conf# 监听域名中带有group0 到 group9 的，交给fastdfs-nginx-module模块处理location ~/group([0-9])/ {    ngx_fastdfs_module;}# 重启 nginx 使配置生效/usr/local/webserver/nginx/sbin/nginx -s reload# 测试#/usr/bin/fdfs_test /etc/fdfs/client.conf upload /root/1.jpgfdfs_upload_file /etc/fdfs/client.conf /root/1.jpg# group1/M00/00/00/wKiuhV9wBT6AIXvOAASfBpLmUgw527.jpg# 访问测试http://192.168.174.133/group1/M00/00/00/wKiuhV9wBT6AIXvOAASfBpLmUgw527.jpg</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+            <tag> FastDfs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue-生命周期图示</title>
       <link href="/2020/08/12/vue-sheng-ming-zhou-qi-tu-shi/"/>
       <url>/2020/08/12/vue-sheng-ming-zhou-qi-tu-shi/</url>

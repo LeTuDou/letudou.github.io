@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iscodeme.gitee.io/"/>
-  <updated>2020-08-12T15:46:54.196Z</updated>
+  <updated>2020-11-12T07:38:57.820Z</updated>
   <id>https://iscodeme.gitee.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx + FastDfs安装</title>
+    <link href="https://iscodeme.gitee.io/2020/08/12/nginx-fastdfs-an-zhuang/"/>
+    <id>https://iscodeme.gitee.io/2020/08/12/nginx-fastdfs-an-zhuang/</id>
+    <published>2020-08-11T16:00:00.000Z</published>
+    <updated>2020-11-12T07:38:57.820Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;程序版本&quot;&gt;&lt;a href=&quot;#程序版本&quot; class=&quot;headerlink&quot; title=&quot;程序版本&quot;&gt;&lt;/a&gt;程序版本&lt;/h2&gt;&lt;p&gt;Nginx  V1.16.1&lt;/p&gt;
+&lt;p&gt;libfastcomman V1.0.43&lt;/p&gt;
+&lt;p&gt;fastdfs
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Nginx" scheme="https://iscodeme.gitee.io/tags/Nginx/"/>
+    
+      <category term="FastDfs" scheme="https://iscodeme.gitee.io/tags/FastDfs/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue-生命周期图示</title>

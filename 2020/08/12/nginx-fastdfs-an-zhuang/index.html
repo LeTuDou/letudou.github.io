@@ -4,15 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="MarkDown基础语法, JAVA,JavaBlog,Java">
-    <meta name="description" content="md语法学习标题1.前面带#号，后面带文字，分别表示h1-h6,只到h6，而且h1下面会有一条横线
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题2.相当于闭合标签
-# 一级">
+    <meta name="keywords" content="Nginx + FastDfs安装, JAVA,JavaBlog,Java">
+    <meta name="description" content="程序版本Nginx  V1.16.1
+libfastcomman V1.0.43
+fastdfs V6.06
+fastdfs-nginx-module V1.22
+依赖安装yum -y install gcc make zlib zlib-">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MarkDown基础语法 | 原来是小张</title>
+    <title>Nginx + FastDfs安装 | 原来是小张</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -229,13 +226,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        MarkDown基础语法
+                        Nginx + FastDfs安装
                     </div>
                 </div>
             </div>
@@ -257,8 +254,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/MarkDown/" target="_blank">
-                                <span class="chip bg-color">MarkDown</span>
+                            <a href="/tags/Nginx/" target="_blank">
+                                <span class="chip bg-color">Nginx</span>
+                            </a>
+                        
+                            <a href="/tags/FastDfs/" target="_blank">
+                                <span class="chip bg-color">FastDfs</span>
                             </a>
                         
                     </div>
@@ -272,14 +273,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-15
+                    2020-08-12
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        828
+                        725
                     </div>
                     
 
@@ -302,154 +303,128 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="md语法学习"><a href="#md语法学习" class="headerlink" title="md语法学习"></a>md语法学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>1.前面带#号，后面带文字，分别表示h1-h6,只到h6，而且h1下面会有一条横线</p>
-<pre><code># 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题</code></pre><p>2.相当于闭合标签</p>
-<pre><code># 一级标题 #
-## 二级标题 ##
-### 三级标题 ###
-#### 四级标题 ####
-##### 五级标题 #####
-###### 六级标题 #####</code></pre><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1.无序列表</p>
-<pre><code>//形式一
-+ a
-+ b
-+ c  
-//形式二
-- a
-- b
-- c
-//形式三
-* a
-* b
-* c</code></pre><p>2.有序列表</p>
-<pre><code>//正常形式
-1. 1
-2. 2
-3. 3
-//错乱形式
-2. aa
-4. vv
-5. bb</code></pre><p>3.嵌套列表</p>
-<pre><code>+ a
-  1. a1
-  2. a2
-  3. a3
-+ b
-  2. b2
-  3. b3
-  4. b4
-* c
-  1. c1
-  2. c2
-  3. c3
-- d
-  1. d1
-  2. d2
-  4. d4
-1. A
-  + A1
-  * A2
-  - A3
-  1. A
-    + A1
-    * A2
-    - A3
-  2. A
-    + A1
-    * A2
-    - A3</code></pre><h2 id="引用说明区块"><a href="#引用说明区块" class="headerlink" title="引用说明区块"></a>引用说明区块</h2><p>1.正常形式</p>
-<pre><code>&gt; 引用内容、说明内容。在语句前面加一个 &gt; ，注意是英文的那个右尖括号，注意空格，引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。</code></pre><p>2.嵌套区块</p>
-<pre><code>&gt; 一级引用
-&gt;&gt; 二级引用
-&gt;&gt;&gt; 三级引用
-&gt;&gt;&gt;&gt; 四级引用
-&gt;&gt;&gt;&gt;&gt; 五级引用
-&gt;&gt;&gt;&gt;&gt;&gt; 六级引用</code></pre><blockquote>
-<p>一级引用</p>
-</blockquote>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>1.少量代码<br><code>public static void main(String[] args){}</code><br>2.大量代码</p>
-<pre><code>public static void main(String[] args){
-  System.out.pringln(&quot;你好，世界&quot;);
+                <h2 id="程序版本"><a href="#程序版本" class="headerlink" title="程序版本"></a>程序版本</h2><p>Nginx  V1.16.1</p>
+<p>libfastcomman V1.0.43</p>
+<p>fastdfs V6.06</p>
+<p>fastdfs-nginx-module V1.22</p>
+<h2 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h2><pre class=" language-sh"><code class="language-sh">yum -y install gcc make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</code></pre>
+<h2 id="FastDfs目录创建"><a href="#FastDfs目录创建" class="headerlink" title="FastDfs目录创建"></a>FastDfs目录创建</h2><pre class=" language-sh"><code class="language-sh">mkdir  -p /fastdfs/tracker
+mkdir  -p /fastdfs/storage
+mkdir  -p /fastdfs/logs
+mkdir  -p /fastdfs/tmp</code></pre>
+<h2 id="下载libfastcomman-源码安装（基础环境）"><a href="#下载libfastcomman-源码安装（基础环境）" class="headerlink" title="下载libfastcomman 源码安装（基础环境）"></a>下载libfastcomman 源码安装（基础环境）</h2><pre class=" language-sh"><code class="language-sh">#   github address:  https://github.com/happyfish100/libfastcommon.git
+#   gitee address:   https://gitee.com/fastdfs100/libfastcommon.git
+
+ git clone https://github.com/happyfish100/libfastcommon.git
+ cd libfastcommon
+ ./make.sh clean && ./make.sh && ./make.sh install
+ # 复制文件，解决FastDFS中lib配置文件路径问题。
+cp /usr/lib64/libfastcommon.so /usr/local/lib/libfastcommon.so
+cp /usr/lib64/libfastcommon.so /usr/lib/libfastcommon.so</code></pre>
+<h2 id="下载安装-FastDFS-源码安装"><a href="#下载安装-FastDFS-源码安装" class="headerlink" title="下载安装 FastDFS 源码安装"></a>下载安装 FastDFS 源码安装</h2><pre class=" language-sh"><code class="language-sh"># 安装完后 默认配置文件的目录为 /etc/fdfs/ 默认命令存放在 /usr/bin/ 并且以 fdfs_ 开头。
+
+#   github address:  https://github.com/happyfish100/fastdfs.git
+#   gitee address:   https://gitee.com/fastdfs100/fastdfs.git
+
+git clone https://github.com/happyfish100/fastdfs.git
+cd fastdfs
+./make.sh clean
+./make.sh 
+./make.sh install
+./setup.sh /etc/fdfs</code></pre>
+<h2 id="修改配置文件-并启动"><a href="#修改配置文件-并启动" class="headerlink" title="修改配置文件 并启动"></a>修改配置文件 并启动</h2><pre class=" language-sh"><code class="language-sh"># 配置 tracker
+vim tracker.conf
+base_path =/fastdfs/tracker
+# 启动 tracker
+fdfs_trackerd /etc/fdfs/tracker.conf start
+
+# 配置 storage
+vim storage.conf
+# 日志目录
+base_path=/fastdfs/storage 
+# 存储目录
+store_path0=/fastdfs/storage
+#tracker节点
+tracker_server=192.168.174.133:22122
+#启动storage
+fdfs_storaged /etc/fdfs/storage.conf start
+
+# 配置 client
+vim client.conf
+#tracker节点
+tracker_server=192.168.174.133:22122
+#日志路径
+base_path=/fastdfs/logs</code></pre>
+<p>注:</p>
+<pre class=" language-sh"><code class="language-sh"># 若是 Linux 系统可以通过服务的方式操作。
+/sbin/service fdfs_trackerd restart
+/sbin/service fdfs_storaged restart
+#监控程序
+/usr/bin/fdfs_monitor /etc/fdfs/client.conf
+#运行测试程序 /usr/bin/fdfs_test <client_conf_filename> <operation>
+/usr/bin/fdfs_test /etc/fdfs/client.conf upload /etc/fdfs/client.conf.sample</code></pre>
+<h2 id="Nginx-安装-与-配置fastdfs-nginx-module"><a href="#Nginx-安装-与-配置fastdfs-nginx-module" class="headerlink" title="Nginx 安装  与 配置fastdfs-nginx-module"></a>Nginx 安装  与 配置fastdfs-nginx-module</h2><pre class=" language-sh"><code class="language-sh"># Nginx源码下载
+wget http://nginx.org/download/nginx-1.16.1.tar.gz
+tar -zxvf nginx-1.16.1.tar.gz
+# fastdfs-nginx-module 源码下载
+# github address: https://github.com/happyfish100/fastdfs-nginx-module
+# gitee address: https://gitee.com/fastdfs100/fastdfs-nginx-module.git
+git clone https://gitee.com/fastdfs100/fastdfs-nginx-module.git
+
+
+# 配置mod_fastdfs.conf文件
+cd /root/fastdfs/fastdfs-nginx-module/src
+cp mod_fastdfs.conf /etc/fdfs/
+vim /etc/fdfs/mod_fastdfs.conf
+# 客户端访问文件连接超时时长（单位：秒）
+connect_timeout=10
+# 存储日志路径
+base_path=/fastdfs/tmp
+# tracker服务IP和端口
+tracker_server=192.168.174.133:22122
+# 访问链接前缀加上组名
+url_have_group_name=true
+group_count = 1
+[group1]
+# 和storage的groupname一一对应
+group_name=group1
+storage_server_port=23000
+store_path_count=1
+# 文件存储路径
+store_path0=/fastdfs/storage
+
+# 编译安装 PCRE (PCRE 作用是让 Nginx 支持 Rewrite 功能)
+#wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz
+#tar -zxvf pcre-8.35.tar.gz
+#cd pcre-8.35
+#./configure
+#make && make install
+#pcre-config --version
+
+# 编译安装 nginx
+cd nginx-1.16.1
+
+#./configure  --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/root/pcre-8.35 --add-module=/root/fastdfs-nginx-module/src
+
+./configure  --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --add-module=/root/fastdfs-nginx-module/src
+make
+make install
+
+# 配置nginx
+vim /usr/local/webserver/nginx/conf/nginx.conf
+# 监听域名中带有group0 到 group9 的，交给fastdfs-nginx-module模块处理
+location ~/group([0-9])/ {
+    ngx_fastdfs_module;
 }
-</code></pre><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>1.行内式<br>链接的文字放在[]中，链接地址放在随后的()中，链接也可以带title属性，链接地址后面空一格，然后用引号引起来</p>
-<pre><code>[简书](https://www.jianshu.com ),</code></pre><p><a href="https://www.jianshu.com" target="_blank" rel="noopener">简书</a>,<br>是一个创作社区,任何人均可以在其上进行创作。用户在简书上面可以方便的创作自己的作品,互相交流。</p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>1.行内式<br>和链接的形式差不多，图片的名字放在[]中，图片地址放在随后的()中，title属性（图片地址后面空一格，然后用引号引起来）,注意的是[]前要加上!</p>
-<pre><code>![猴子](https://raw.githubusercontent.com/LeTuDou/images/master/20190811000823.jpg)
-</code></pre><p><img src="/images/yt.jpg" alt="本地"><br><img src="https://raw.githubusercontent.com/LeTuDou/images/master/20190811000823.jpg" alt="远程"></p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><pre><code>分割线可以由* - _（星号，减号，底线）这3个符号的至少3个符号表示，注意至少要3个，且不需要连续，有空格也可以
----
-- - -
-------
-***
-* * *
-******
-___
-_ _ _
-______</code></pre><hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><pre><code>1.强调字体
-一个星号或者是一个下划线包起来，会转换为&lt;em&gt;倾斜，如果是2个，会转换为&lt;strong&gt;加粗
-*md*    
-**md**
-_md_   
- __md__</code></pre><p><em>md</em>  </p>
-<pre><code>2.基本上和js转义一样,\加需要转义的字符
-\\
-\*
-\+
-\-
-\`
-\_</code></pre><p>1+2=3</p>
-<pre><code>3.删除线
-用~~把需要显示删除线的字符包裹起来
-~~删除线~~</code></pre><p>什么是删除线?这就是<del>删除线</del>!原来是这样的</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><pre><code>|123|234|345|
-|:-|:-:|-:|
-|abc|bcd|cde|
-|abc|bcd|cde|
-|abc|bcd|cde|
+# 重启 nginx 使配置生效
+/usr/local/webserver/nginx/sbin/nginx -s reload
+# 测试
+#/usr/bin/fdfs_test /etc/fdfs/client.conf upload /root/1.jpg
 
-|123|234|345|
-|:---|:---:|---:|
-|abc|bcd|cde|
-|abc|bcd|cde|
-|abc|bcd|cde|
-
-123|234|345
-:-|:-:|-:
-abc|bcd|cde
-abc|bcd|cde
-abc|bcd|cde
-上面三个例子的效果一样，由此可得：
-1. 表格的格式不一定要对的非常起，但是为了良好的变成风格，尽量对齐是最好的
-2. 分割线后面的冒号表示对齐方式，写在左边表示左对齐，右边为右对齐，两边都写表示居中</code></pre><table>
-<thead>
-<tr>
-<th align="left">123</th>
-<th align="center">234</th>
-<th align="right">345</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">abc</td>
-<td align="center">bcd</td>
-<td align="right">cde</td>
-</tr>
-<tr>
-<td align="left">abc</td>
-<td align="center">bcd</td>
-<td align="right">cde</td>
-</tr>
-<tr>
-<td align="left">abc</td>
-<td align="center">bcd</td>
-<td align="right">cde</td>
-</tr>
-</tbody></table>
+fdfs_upload_file /etc/fdfs/client.conf /root/1.jpg
+# group1/M00/00/00/wKiuhV9wBT6AIXvOAASfBpLmUgw527.jpg
+# 访问测试
+http://192.168.174.133/group1/M00/00/00/wKiuhV9wBT6AIXvOAASfBpLmUgw527.jpg</code></pre>
 
             </div>
             <hr/>
@@ -590,7 +565,7 @@ abc|bcd|cde
                     </span>
                     <a href="https://iscodeme.gitee.io" class="b-link-green">原来是小张</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/09/15/markdown-ji-chu-yu-fa/" class="b-link-green">MarkDown基础语法</a>
+                    <a href="/2020/08/12/nginx-fastdfs-an-zhuang/" class="b-link-green">Nginx + FastDfs安装</a>
                 </p>
             </div>
         </div>
@@ -611,52 +586,48 @@ abc|bcd|cde
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/30/ji-guang-liang-ban-xiao-shi-xue-hui-yong-si-wei-dao-tu-ji-bi-ji/">
+                <a href="/2020/08/12/nginx-fastdfs-an-zhuang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="姬广亮 半小时学会用思维导图记笔记">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Nginx + FastDfs安装">
                         
-                        <span class="card-title">姬广亮 半小时学会用思维导图记笔记</span>
+                        <span class="card-title">Nginx + FastDfs安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">一、什么是思维导图思维导图的定义​    思维导图就是“思维的地图”。思维导图是基于左右脑运作原理的一种发散性结构的“图文并茂”的思维笔记。它简单却又极其有效，是一种革命性的协助解决问题的思维工具。
-​    
-思维导图的作用​    过去</div>
+                    <div class="summary">程序版本Nginx  V1.16.1
+libfastcomman V1.0.43
+fastdfs V6.06
+fastdfs-nginx-module V1.22
+依赖安装yum -y install gcc make zlib zlib-</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-12
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/学习/" class="post-category" target="_blank">
-                                    学习
-                                </a>
-                            
-                            <a href="/categories/学习/思维导图/" class="post-category" target="_blank">
-                                    思维导图
-                                </a>
-                            
+                            <i class="fa fa-user fa-fw"></i>
+                            小张
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/" target="_blank">
-                        <span class="chip bg-color">学习</span>
+                    <a href="/tags/Nginx/" target="_blank">
+                        <span class="chip bg-color">Nginx</span>
                     </a>
                     
-                    <a href="/tags/思维导图/" target="_blank">
-                        <span class="chip bg-color">思维导图</span>
+                    <a href="/tags/FastDfs/" target="_blank">
+                        <span class="chip bg-color">FastDfs</span>
                     </a>
                     
                 </div>
@@ -670,28 +641,25 @@ abc|bcd|cde
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/07/web-xing-neng-ce-shi-gong-ju-shi-yong/">
+                <a href="/2020/08/12/vue-sheng-ming-zhou-qi-tu-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Web性能测试工具使用">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Vue-生命周期图示">
                         
-                        <span class="card-title">Web性能测试工具使用</span>
+                        <span class="card-title">Vue-生命周期图示</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">apache bench
-主要是用来测试apache的
+                    <div class="summary">Vue 生命周期图示似乎觉得特别像Java里面的AOP环绕通知。
+网图中文
 
-使用说明:
-ab -c 100 -n 1000 http://www.baidu.com/
--c 表示并发用户数
--n 表示请求总数
-测试结果:
-D:\httpd-2.4.41-o1</div>
+原版英文
+
+</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-07
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-12
                             </span>
                         <span class="publish-author">
                             
@@ -704,12 +672,8 @@ D:\httpd-2.4.41-o1</div>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/WebTest/" target="_blank">
-                        <span class="chip bg-color">WebTest</span>
+                    <a href="/tags/Vue/" target="_blank">
+                        <span class="chip bg-color">Vue</span>
                     </a>
                     
                 </div>
